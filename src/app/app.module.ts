@@ -3,26 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AjoutPatientComponent } from './modules/general/ajout-patient/ajout-patient.component';
-import { AjoutMedecinComponent } from './modules/general/ajout-medecin/ajout-medecin.component';
-import { ListePatientComponent } from './modules/general/liste-patient/liste-patient.component';
-import { ListeMedecinComponent } from './modules/general/liste-medecin/liste-medecin.component';
-import { CalendrierRendezVousComponent } from './modules/general/calendrier-rendez-vous/calendrier-rendez-vous.component';
-import { CreationRendezVousComponent } from './modules/general/creation-rendez-vous/creation-rendez-vous.component';
-import { DetailsRendezVousComponent } from './modules/general/details-rendez-vous/details-rendez-vous.component';
-import { AccueilComponent } from './modules/general/accueil/accueil.component';
+
+import { AjoutMedecinComponent } from './ajout-medecin/ajout-medecin.component';
+import { ListePatientComponent } from './liste-patient/liste-patient.component';
+import { ListeMedecinComponent } from './liste-medecin/liste-medecin.component';
+import { CalendrierRendezVousComponent } from './calendrier-rendez-vous/calendrier-rendez-vous.component';
+import { CreationRendezVousComponent } from './creation-rendez-vous/creation-rendez-vous.component';
+import { AjoutPatientComponent } from './ajout-patient/ajout-patient.component';
+import { AccueilComponent } from './accueil/accueil.component';
+import { AfficherDetailRendezVousComponent } from './afficher-detail-rendez-vous/afficher-detail-rendez-vous.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    AjoutPatientComponent,
     AjoutMedecinComponent,
     ListePatientComponent,
     ListeMedecinComponent,
     CalendrierRendezVousComponent,
     CreationRendezVousComponent,
-    DetailsRendezVousComponent,
-    AccueilComponent
+    AjoutPatientComponent,
+    AccueilComponent,
+    AfficherDetailRendezVousComponent
   ],
   imports: [
     BrowserModule,
