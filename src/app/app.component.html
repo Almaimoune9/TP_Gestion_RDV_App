@@ -1,38 +1,49 @@
 <div>
   <header>
     <section>
-      <img src="" alt="LOGO">
+      <img src="../assets/img/logo.png" alt="LOGO">
     </section>
 
     <ul>
-      <li><a routerLink="/">Accueil</a></li>
-      <li><a routerLink="/Ajouter Medecin">Ajout medecin</a></li>
-      <li><a routerLink="/Ajouter Patient">Ajout patient</a></li>
-      <li><a routerLink="/Liste Medecin">Afficher la liste des medecins</a></li>
-      <li><a routerLink="/Liste Patient">Afficher la liste des patients</a></li>
-      <li><a routerLink="/Mes rendez-vous">Afficher mes rendez-vous</a></li>
-      <li><a routerLink="/Creation rendez-vous">Créer un rendez-vous</a></li>
-      <li><a routerLink="/Detail Rendez-vous">En savoir plus sur mes rendez-vous</a></li>
+      <li><a routerLink="/Statut">INSCRIPTION</a></li>
+      <li><a routerLink="/Connexion">CONNEXION</a></li>
     </ul>
   </header>
 
 
-  <main>
-    <h4>Routes Result</h4>
-    <router-outlet></router-outlet>
+  <main class="varie" >
+    <div style="box-sizing: border-box; margin-top: 6rem;" ><router-outlet></router-outlet></div>
+
   </main>
 
 
   <footer>
-    {{title}}
+    <div class="image">
+        <img src="../assets/img/footer-logo.png" alt="image">
+    </div>
+    <div class="pri">
+      <div class="sec">
+        <div>
+          <a href="">Confidentialité</a>
+        </div>
+        <div>
+          <a href="">Conditin d'utilisation</a>
+        </div>
+        <div>
+          <a href="">Apropos de nous</a>
+        </div>
+      </div>
+      <div class="dif">
+          <a href="">Obetnir de l'aide</a>
+      </div>
+    </div>
+    <div class="langue">
+      <select>
+        <option value="français">Français</option>
+        <option value="anglais">English</option>
+      </select>
+    </div>
   </footer>
 
 </div>
-<!-- {path:'', component:AccueilComponent},
-  {path :'Ajouter Medecin', component : AjoutMedecinComponent},
-  {path : 'Ajouter Patient', component: AjoutPatientComponent},
-  {path: 'Liste Medecin', component: ListeMedecinComponent},
-  {path: 'Liste Patient',component:ListePatientComponent},
-  {path: 'Mes rendez-vous', component: CalendrierRendezVousComponent},
-  {path:'Creation rendez-vous', component: CreationRendezVousComponent},
-  {path:'Detail Rendez-vous',component:AfficherDetailRendezVousComponent} -->
+
