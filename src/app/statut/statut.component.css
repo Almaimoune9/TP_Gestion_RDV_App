@@ -1,0 +1,40 @@
+.principale{
+  display: flex;
+  align-items: center;
+}
+.principale .droite{
+  width: 50%;
+  text-align: center;
+}
+.principale .gauche{
+  width: 50%;
+  text-align: center;
+  align-items: center;
+}
+.principale .gauche img{
+  width: 20.5em;
+  height: auto;
+}
+.principale .droite img{
+  width: 20em;
+  height: auto;
+}
+.principale .droite .choix{
+
+ margin-left:2.3em ;
+}
+.principale .droite .choix ul{
+  list-style-type: none;
+  display: flex;
+}
+.principale .droite .choix a{
+  margin: 2.7em;
+  font-size: 1.5em;
+  font-weight: bolder;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 15px;
+  padding: 0.3em;
+  background-color: #008000;
+  color: #fff;
+}

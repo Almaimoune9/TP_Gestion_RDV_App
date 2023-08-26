@@ -1,38 +1,40 @@
-<body>
-    <p class="image">
-        <img src="../assets/image/photoimg.png" alt="image">
-    </p>
-    <div>
-        <form action="/action_page.php">
-          <label for="prenom">Prenom</label>
-          <input type="text" id="fname" name="prenom" >
-      
-          <label for="nom">Nom</label>
-          <input type="text" id="nom" name="nom">
-      
-          <label for="sexe">Sexe</label>
-          <select id="sexe" name="sexe">
-            <option value=""></option>
-            <option value="feminin">Feminin</option>
-            <option value="masculin">Masculin</option>
-          </select>
 
-          <label for="date">Date de naissance</label>
-          <input type="date" id="date" name="date">
-         
-          <label for="telephone">Telephone</label>
-          <input type="number" id="telephone" name="telephone">
-
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email">
-
-          <label for="password">Mot de pass</label>
-          <input type="password" id="password" name="password">
-
-          <label for="password">Confirmer</label>
-          <input type="password" id="password" name="password">
-
-          <input routerLink="Liste Patient"  type="submit" value="Valider" >
-        </form>
+<div class="grand">
+  <!-- formulaire d'inscriotion patient  -->
+  <form action="">
+    <div class="forme">
+      <!-- Les labels  -->
+      <div class="labs">
+        <label for="prenom" name="prenom">Prénom :</label><br><br>
+        <label for="nom" name="nom">Nom :</label><br><br>
+        <label for="sexe" name="sexe">Sexe :</label><br><br>
+        <label for="naissance" name="naissance">Date de naissance :</label><br><br>
+        <label for="tel" name="tel">Téléphone :</label><br><br>
+        <label for="email" name="mail">Email :</label><br><br>
+        <label for="pass" name="pass">Mot de passe :</label><br><br>
+        <label for="confime" name="confime">Confimer :</label><br><br>
       </div>
-</body>
+      <!-- Les champs  -->
+      <div class="champs">
+        <input type="text" name="prenom"><br><br>
+        <input type="text" name="nom"><br><br>
+        <input type="text" name="sexe"><br><br>
+        <input type="date" name="naissance"><br><br>
+        <input type="tel" name="tel"><br><br>
+        <input type="email" name="mail"><br><br>
+        <input type="password" name="pass"><br><br>
+        <input type="password" name="confime"><br><br>
+
+      </div>
+
+    </div>
+    <div class="valid">
+      <input type="submit" value="valider">
+    </div>
+  </form>
+
+  <!-- image  -->
+  <div class="photo">
+    <img src="../assets/img/medecin.png" alt="">
+  </div>
+</div>

@@ -12,6 +12,8 @@ import { CreationRendezVousComponent } from './creation-rendez-vous/creation-ren
 import { AjoutPatientComponent } from './ajout-patient/ajout-patient.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { AfficherDetailRendezVousComponent } from './afficher-detail-rendez-vous/afficher-detail-rendez-vous.component';
+import { ConnexionComponent } from './connexion/connexion.component';
+import { StatutComponent } from './statut/statut.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { AfficherDetailRendezVousComponent } from './afficher-detail-rendez-vous
     CreationRendezVousComponent,
     AjoutPatientComponent,
     AccueilComponent,
-    AfficherDetailRendezVousComponent
+    AfficherDetailRendezVousComponent,
+    ConnexionComponent,
+    StatutComponent
   ],
   imports: [
     BrowserModule,

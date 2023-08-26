@@ -1,0 +1,104 @@
+/* Réinitialisation des styles par défaut pour une meilleure cohérence entre les navigateurs */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: auto;
+}
+
+/* Styles pour l'en-tête et le pied de page */
+header, footer {
+  background-color: #00FF00;
+  width: 100vw;
+  /* height: auto; */
+  box-shadow: 0px 3px rgba(100, 100, 100, 0.397), 0em 0em ;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+header ul {
+  display: flex;
+  list-style-type: none;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: white;
+  margin: 1em;
+  padding: 0.3em;
+  border-radius: 10px;
+  background-color: #008000;
+}
+
+header section img {
+  width: 7em;
+  height: auto;
+}
+
+/* Styles pour le pied de page */
+footer .pri {
+  width: 70%;
+  /* ligne à enlever une fois le footer fini  */
+  /* border: 1px solid #000; */
+}
+
+footer .pri .sec {
+  margin: 0.5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer.image {
+  width: 10%;
+}
+
+footer .image img {
+  width: 4em;
+  height: auto;
+}
+
+footer .pri ul {
+  list-style-type: none;
+}
+
+footer a, .dif a {
+  text-decoration: none;
+  color: #000;
+  font-size:1.3em;
+  font-weight: bolder;
+
+}
+
+.dif a {
+  font-size:1.3em;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+}
+
+/* Styles pour la section avec classe .varie */

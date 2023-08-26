@@ -1,12 +1,7 @@
 
 
 
-
-
-
-  <main>
-    <router-outlet></router-outlet>
-  </main>
+  
 
 
 
@@ -18,4 +13,54 @@
   {path: 'Mes rendez-vous', component: CalendrierRendezVousComponent},
   {path:'Creation rendez-vous', component: CreationRendezVousComponent},
   {path:'Detail Rendez-vous',component:AfficherDetailRendezVousComponent} -->
+<div>
+  <header>
+    <section>
+      <img src="../assets/img/logo.png" alt="LOGO">
+    </section>
+
+    <ul>
+      <li><a routerLink="/Statut">INSCRIPTION</a></li>
+      <li><a routerLink="/Connexion">CONNEXION</a></li>
+    </ul>
+  </header>
+
+
+  <main class="varie" >
+    <div style="box-sizing: border-box; margin-top: 6rem;" ><router-outlet></router-outlet></div>
+
+  </main>
+
+
+  <footer>
+    <div class="image">
+        <img src="../assets/img/footer-logo.png" alt="image">
+    </div>
+    <div class="pri">
+      <div class="sec">
+        <div>
+          <a href="">Confidentialité</a>
+        </div>
+        <div>
+          <a href="">Conditin d'utilisation</a>
+        </div>
+        <div>
+          <a href="">Apropos de nous</a>
+        </div>
+      </div>
+      <div class="dif">
+          <a href="">Obetnir de l'aide</a>
+      </div>
+    </div>
+    <div class="langue">
+      <select>
+        <option value="français">Français</option>
+        <option value="anglais">English</option>
+      </select>
+    </div>
+  </footer>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>
 
