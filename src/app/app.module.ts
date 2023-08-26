@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 import { AjoutMedecinComponent } from './ajout-medecin/ajout-medecin.component';
 import { ListePatientComponent } from './liste-patient/liste-patient.component';
@@ -14,6 +15,8 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { AfficherDetailRendezVousComponent } from './afficher-detail-rendez-vous/afficher-detail-rendez-vous.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { StatutComponent } from './statut/statut.component';
+import { RendezVousMedecinComponent } from './rendez-vous-medecin/rendez-vous-medecin.component';
+import { DonnerRendezVousComponent } from './donner-rendez-vous/donner-rendez-vous.component';
 
 
 @NgModule({
@@ -28,11 +31,14 @@ import { StatutComponent } from './statut/statut.component';
     AccueilComponent,
     AfficherDetailRendezVousComponent,
     ConnexionComponent,
-    StatutComponent
+    StatutComponent,
+    RendezVousMedecinComponent,
+    DonnerRendezVousComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FullCalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
