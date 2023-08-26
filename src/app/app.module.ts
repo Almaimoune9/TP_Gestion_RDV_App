@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FullCalendarModule } from '@fullcalendar/angular'; //pour full callendar
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,10 +28,12 @@ import { StatutComponent } from './statut/statut.component';
     AfficherDetailRendezVousComponent,
     ConnexionComponent,
     StatutComponent
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FullCalendarModule //pour full callendar
   ],
   providers: [],
   bootstrap: [AppComponent]
