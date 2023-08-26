@@ -4,34 +4,30 @@
    
     align-items: center;
 } */
+/*Style pour le container*/
 .container{
-    align-items: center;
-    max-width: 100%;
-    padding: 150px 85px;
+    max-width: 50%;
+    padding: 50px 100px;
     color: black;
     font-size: 30px;
 }
+/*Style pour le bouton*/
 .btn {
     color: white;
     background: #008000;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 5px 5px;
+    margin-left: 5px;
 }
 
 .btn:hover {
     letter-spacing: 2px;
 }
-/* div{
-    float: left;
-    margin-left: 200px;
-} */
-/* #img{ 
-    margin-top: 7%;
-} */
-
-
-.controller{
-    width: 400px;
+/*Style pour l'image*/
+.image{
+    width: 20%;
     position: absolute;
     right: 15%;
     top: 18%;
