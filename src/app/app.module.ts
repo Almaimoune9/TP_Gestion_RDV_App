@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FullCalendarModule } from '@fullcalendar/angular'; //pour full callendar
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FullCalendarModule } from '@fullcalendar/angular';
 
 import { AjoutMedecinComponent } from './ajout-medecin/ajout-medecin.component';
 import { ListePatientComponent } from './liste-patient/liste-patient.component';
@@ -38,7 +38,7 @@ import { DonnerRendezVousComponent } from './donner-rendez-vous/donner-rendez-vo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FullCalendarModule
+    FullCalendarModule //pour full callendar
   ],
   providers: [],
   bootstrap: [AppComponent]
