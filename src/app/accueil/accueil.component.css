@@ -22,8 +22,8 @@
     margin-left: 5px;
 }
 
-.btn:hover {
-    letter-spacing: 2px;
+.btn:active {
+    transform: scale(0.96);
 }
 /*Style pour l'image*/
 .image{
