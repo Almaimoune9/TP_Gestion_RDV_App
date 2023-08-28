@@ -1,24 +1,35 @@
-<div class="side-menu">
-    <ul>
-        <li>Mes rendez-vous</li>
-        <li>Donner un rendez-vous</li>
-        <li>Ajouter patient</li>
-        <li>Liste des patients</li>
-        <li>Liste des medecins</li>
-        <li>Créer des articles</li>
-        <input class="deconnexion" type="submit" value="Déconnexion" >
-    </ul>
-</div>
-<div class="container">
+<h1 mat-dialog-title> Donner un rendez-vous</h1>
+  
+ <div mat-dialog-actions class="btn">
+  <div>
+    <label for="date">Date</label>
+            <input type="date" id="date" name="date">
+    
+            <label for="text">Heure</label>
+            <input type="text" id="telephone" name="text">
+    
+            <label for="patient">Patient</label>
+            <select id="patient" name="patient">
+              <option value=""></option>
+              <option value="feminin">Feminin</option>
+              <option value="masculin">Masculin</option>
+            </select>
+            <label for="description">Motif</label>
+          <textarea id="description" name="description" rows="4" cols="50"></textarea>
+     </div>
+    <button (click)="closepopup()" style="margin-right: 40%;" mat-raised-button color="warn">Close</button>
+    <button mat-raised-button color="accent">Valider</button>
+ </div>
+  <!-- <div class="container">
     <div class="formulaire">
         <form action=""> 
         <h2>Donner un rendez-vous</h2>
           <label for="date">Date</label>
           <input type="date" id="date" name="date">
-
+  
           <label for="text">Heure</label>
           <input type="text" id="telephone" name="text">
-
+  
           <label for="patient">Patient</label>
           <select id="patient" name="patient">
             <option value=""></option>
@@ -29,6 +40,6 @@
         <textarea id="description" name="description" rows="4" cols="50"></textarea>
           <input routerLink="Mes_rendez_vous"  type="submit" value="Valider" >
         </form>
-      </div>
-        
- </div>
+      </div> 
+    </div>     -->
+ 

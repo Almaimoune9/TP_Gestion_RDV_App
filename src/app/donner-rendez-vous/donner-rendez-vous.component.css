@@ -1,51 +1,13 @@
 
-li{
-    list-style: none;
-}
-.side-menu{
-    position: fixed;
-    background: #D8D9D8;
-    width: 22%;
-    min-height: 70%;
-    margin-top: 0%;
-    margin-left: -10px;
-    border-radius: 2%;
-}
-.side-menu li{
-    font-size: 25px;
-    padding: 5px 20px;
-    color: black;
-    width: 100%;
-    margin-top: 2%;
-    margin-left: -10px;
-    font-weight: 600;
-}
-.side-menu li:hover{
-    background: white;
-    border-radius: 10px;
-}
-.side-menu ul{
-    padding: 0%;
-    width: 100%;
-}
-.deconnexion{
-    color: #FFFFFF;
-    margin-left: 1%;
-    margin-top: 30%;
-    background: #008000;
-    width : 40%;
-    border-radius: 30px;
-    text-decoration: none;
-}
 input, select {
-    width: 100%;
-    margin: 0px 2px 0px 2px;
-    display: flex; 
+    width: 50%;
+    margin-left:20;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     padding: 2%;
     height: 50px;
+    justify-content: center;
   }
   
   input[type=submit] {
@@ -75,7 +37,6 @@ form{
     width: 430px;
     background-color:#D8D9D8;
     border-radius: 10px;
-    /* //backdrop-filter: blur(10px); */
     border: 2px solid rgba(255,255,255,0.1);
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
     padding: 15px 35px;
@@ -110,15 +71,25 @@ label{
 .formulaire{
     margin-top: 5px;
 }
+ 
 
 
+h1{
+    margin-left: 25%;
+    font-weight: bolder;
+}
+.btn{
+    margin-left: 25%; 
+}
 
-
-
-
-
-
-  
+.mdc-dialog__actions {
+    align-items: center;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px;
+    /* border-top: 1px solid rgba(0,0,0,0); */
+} 
   
   
  

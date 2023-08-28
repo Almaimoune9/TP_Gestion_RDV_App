@@ -102,3 +102,26 @@ footer {
 }
 
 /* Styles pour la section avec classe .varie */
+/* .mdc-dialog__container {
+  position: relative;
+  top: 220px;
+}
+.mat-mdc-dialog-container {
+  position: relative;
+  top: 220px;
+  left: 156px;
+}
+
+mat-mdc-dialog-surface {
+  position: relative;
+  top: 220px;
+  left: 156px;
+} */
+
+
+
+.cdk-overlay-pane {
+  position: absolute;
+  height: 150px;
+  left: 0;
+}
