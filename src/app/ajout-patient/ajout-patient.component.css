@@ -38,9 +38,9 @@
   font-weight: bold;
   text-decoration: underline;
 }
-.grand .forme .champs{
-  /* border: 1px solid black; */
-}
+/* .grand .forme .champs{
+  border: 1px solid black;
+} */
 .grand .forme .champs input{
   width: 30em ;
   height: 2.2em;

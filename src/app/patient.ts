@@ -4,5 +4,8 @@ export class Patient {
   "Prenom":string;
   "Email":string;
   "Sexe":boolean;
+  static component: any;
+
+  constructor(){}
 
 }
