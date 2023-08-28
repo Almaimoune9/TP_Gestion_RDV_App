@@ -1,0 +1,46 @@
+
+
+/* .text {
+   
+    align-items: center;
+} */
+/*Style pour le container*/
+.container{
+    max-width: 50%;
+    padding: 50px 100px;
+    color: black;
+    font-size: 30px;
+}
+/*Style pour le bouton*/
+.btn {
+    color: white;
+    background: #008000;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 5px 5px;
+    margin-left: 5px;
+}
+
+.btn:active {
+    transform: scale(0.96);
+}
+/*Style pour l'image*/
+.image{
+    width: 20%;
+    position: absolute;
+    right: 15%;
+    top: 18%;
+    z-index: 2;
+}
+
+@media only screen and (max-width:700px){
+    .container{
+        flex-direction: column-reverse;
+        margin: 50px;
+    }
+    .container2{
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+}

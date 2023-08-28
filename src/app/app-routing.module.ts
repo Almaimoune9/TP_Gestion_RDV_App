@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+
 import { RouterModule, Routes } from '@angular/router';
 import { AjoutMedecinComponent } from './ajout-medecin/ajout-medecin.component';
 import { AjoutPatientComponent } from './ajout-patient/ajout-patient.component';
@@ -10,10 +11,11 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { AfficherDetailRendezVousComponent } from './afficher-detail-rendez-vous/afficher-detail-rendez-vous.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { StatutComponent } from './statut/statut.component';
+import { RendezVousMedecinComponent } from './rendez-vous-medecin/rendez-vous-medecin.component';
+import { DonnerRendezVousComponent } from './donner-rendez-vous/donner-rendez-vous.component';
 
 
 const routes: Routes = [
-
 
   {path:'', component:AccueilComponent},
   {path :'Ajouter_Medecin', component : AjoutMedecinComponent},
@@ -21,6 +23,8 @@ const routes: Routes = [
   {path: 'Liste_Medecin', component: ListeMedecinComponent},
   {path: 'Liste_Patient',component:ListePatientComponent},
   {path: 'Mes_rendez_vous', component: CalendrierRendezVousComponent},
+  {path: 'Rendez_vous_medecin', component:RendezVousMedecinComponent},
+  {path: 'Donner_rendez_vous', component:DonnerRendezVousComponent},
   {path:'Creation_rendez_vous', component: CreationRendezVousComponent},
   {path:'Detail_Rendez_vous',component:AfficherDetailRendezVousComponent},
   {path:"Connexion", component: ConnexionComponent},
@@ -28,9 +32,11 @@ const routes: Routes = [
 
 ];
 
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  declarations:[]
 })
 export class AppRoutingModule { }
 

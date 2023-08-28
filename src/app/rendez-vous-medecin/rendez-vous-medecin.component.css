@@ -49,21 +49,16 @@ input{
     border-radius: 30px;
     text-decoration: none;
 }
-.table{
-    margin-left: 22%;
+.calendrier{
+    width: 75%;
+    margin-left: 24%;
 }
-table{
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  th, td{
-    border: 1px solid black;
-    padding: 10px;
-  }
-  th{
+.calendrierMois{
+    font-size: 15px;
+    padding: 2px 20px;
+    color: black;
+    width: 76%;
     font-weight: 600;
-  }
-  h2{
-    text-align: center;
-  }
+    height: 400px;
+    position: fixed;
+}

@@ -1,0 +1,41 @@
+
+.image{ 
+    width: 20%;
+    position: absolute;
+    right: 15%;
+    top: 18%;
+}
+input, select {
+    width: 100%;
+    margin: 0px 2px 0px 2px;
+    display: flex; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 2%;
+    
+  }
+  
+  input[type=submit] {
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 60px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 25%;
+  }
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  .container{
+    position: fixed;
+    background: #D8D9D8;
+    width: 25%;
+    padding: 4px 40px;
+    min-height: 70%;
+    margin: 0 10px 50px;
+    border-radius: 10px;
+}
