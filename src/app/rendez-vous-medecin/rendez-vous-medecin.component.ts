@@ -16,13 +16,19 @@ export class RendezVousMedecinComponent {
     plugins: [dayGridPlugin],
     locale: frLocale
   }
+  popupAffiche: boolean = false;
   constructor(private _dialog:MatDialog){
 
   }
   Openpopup(){
-    this._dialog.open(DonnerRendezVousComponent,{
+    if (!this.popupAffiche) {
+      this._dialog.open(DonnerRendezVousComponent,{
       
-    })
+    });
+    this.popupAffiche = true;
   }
-
+}
+reinitialiserPopup() {
+  this.popupAffiche = false;
+}
 }
