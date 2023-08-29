@@ -22,13 +22,15 @@ export class RendezVousMedecinComponent {
   }
   Openpopup(){
     if (!this.popupAffiche) {
-      this._dialog.open(DonnerRendezVousComponent,{
+      const dialogRef = this._dialog.open(DonnerRendezVousComponent,{
       
     });
+    dialogRef.afterClosed().subscribe(() => {
+      // Le popup a été fermé, réinitialiser la variable
+      this.popupAffiche = false;
+    });
+
     this.popupAffiche = true;
   }
-}
-reinitialiserPopup() {
-  this.popupAffiche = false;
 }
 }
