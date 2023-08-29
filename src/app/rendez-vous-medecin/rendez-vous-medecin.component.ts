@@ -23,7 +23,7 @@ export class RendezVousMedecinComponent {
   Openpopup(){
     if (!this.popupAffiche) {
       this._dialog.open(DonnerRendezVousComponent,{
-      
+
     });
     this.popupAffiche = true;
   }

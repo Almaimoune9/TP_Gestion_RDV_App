@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FullCalendarModule } from '@fullcalendar/angular'; //pour full callendar
 import { FormsModule } from '@angular/forms'; // Importez FormsModule
 //  import { ReactiveFormsModule } from '@angular/forms'; //importation de reactive forme module
-import {MatDialogModule} from '@angular/material/dialog'; 
+import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,6 +21,7 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { StatutComponent } from './statut/statut.component';
 import { RendezVousMedecinComponent } from './rendez-vous-medecin/rendez-vous-medecin.component';
 import { DonnerRendezVousComponent } from './donner-rendez-vous/donner-rendez-vous.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -46,7 +47,7 @@ import { DonnerRendezVousComponent } from './donner-rendez-vous/donner-rendez-vo
     FormsModule,// Ajoutez FormsModule ici
     // ReactiveFormsModule //reactive forme module,
     MatDialogModule, 
-    MatButtonModule,
+    MatButtonModule, BrowserAnimationsModule,
   ],
   exports:[
     MatDialogModule,
