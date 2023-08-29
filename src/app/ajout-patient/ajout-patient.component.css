@@ -63,7 +63,7 @@ form{
   text-align: center;
   padding: 0.5em;
  }
- .grand .valid input{
+ .grand .valid button{
   width: 7em;
   font-size: 1.3em;
   font-weight: bolder;
@@ -75,3 +75,6 @@ form{
   text-transform: uppercase;
 
  }
+ .invalid-field {
+  border: 2px solid red;
+}

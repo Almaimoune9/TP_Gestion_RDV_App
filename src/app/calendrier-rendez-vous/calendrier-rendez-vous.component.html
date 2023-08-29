@@ -1,7 +1,17 @@
-<<<<<<< HEAD
 
-
-=======
-<p>calendrier-rendez-vous works!</p>
-<full-calendar [options]="calendarOptions"></full-calendar>
->>>>>>> d5e31cfa8eac17824fb2cf6a76f4e90dddcb08c3
+<div class="side-menu">
+  <ul>
+      <li><a routerLink="/Mes_rendez_vous">Mes rendez-vous</a></li>
+      <li><a routerLink="/Mes_rendez_vous">Prendre un rendez-vous</a></li>
+      <li><a routerLink="/Ajouter_Patient">Ajouter patient</a></li>
+      <li><a routerLink="/Liste_Medecin">Liste des medecins</a></li>
+<!-- à revoir demande creation d'un composent article  -->
+      <li><a routerLink="/Ajouter_Patient">Lire des articles</a></li>
+      <br><br><br><br><br><br>
+      <input type="submit" value="Déconnexion" (click)="deconnexion()">
+  </ul>
+</div>
+<div class="calendrier" style="text-align: center;">
+  <h2>Les rendez-vous du mois de </h2>
+  <full-calendar class="calendrierMois" [options]="calendarOptions"></full-calendar>
+</div>
