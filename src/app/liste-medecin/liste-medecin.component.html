@@ -19,12 +19,12 @@
       <th>EMAIL</th>
       <th>SPECIALITE</th>
     </tr>
-    <tr>
-      <td>Giraud</td>
-      <td>Pierre</td>
-      <td>93080743</td>
-      <td>mp@gmail.com</td>
-      <td>Infermier</td>
+    <tr *ngFor="let i of data ">
+        <td>{{i.nom}}</td>
+        <td>{{i.prenom}}</td>
+        <td>{{i.telephone}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.specialite}}</td>
     </tr>
   </table>
 </div>

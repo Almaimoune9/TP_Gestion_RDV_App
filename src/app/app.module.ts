@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FullCalendarModule } from '@fullcalendar/angular'; //pour full callendar
 import { FormsModule } from '@angular/forms'; // Importez FormsModule
 //  import { ReactiveFormsModule } from '@angular/forms'; //importation de reactive forme module
-
+import {MatDialogModule} from '@angular/material/dialog'; 
+import {MatButtonModule} from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,14 +37,19 @@ import { DonnerRendezVousComponent } from './donner-rendez-vous/donner-rendez-vo
     ConnexionComponent,
     StatutComponent,
     RendezVousMedecinComponent,
-    DonnerRendezVousComponent
+    DonnerRendezVousComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FullCalendarModule, //pour full callendar
-    FormsModule// Ajoutez FormsModule ici
-    // ReactiveFormsModule //reactive forme module
+    FormsModule,// Ajoutez FormsModule ici
+    // ReactiveFormsModule //reactive forme module,
+    MatDialogModule, 
+    MatButtonModule,
+  ],
+  exports:[
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

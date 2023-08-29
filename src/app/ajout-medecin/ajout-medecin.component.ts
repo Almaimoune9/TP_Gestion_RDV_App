@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./ajout-medecin.component.css']
 })
 export class AjoutMedecinComponent {
-
+  
 }
+
