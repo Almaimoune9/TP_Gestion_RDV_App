@@ -2,12 +2,12 @@
 .grand{
   display: flex;
   align-items: center;
-  margin: 0.3em;
+  margin: 2em;
   justify-content: space-between;
 }
 .grand .photo{
+  /* à enlever une fois fini  */
   /* border: 1px solid black; */
-  /* width: 50%; */
   height: auto;
   text-align: center;
   padding: 1em;
@@ -23,12 +23,16 @@
 .grand .forme{
   /* à enlever une fois fini  */
   /* border: 1px solid black; */
-  padding: 1em;
-
+  padding: 0.2em;
   margin-left: 2em;
   width: 90%;
   height: 60vh;
   display: flex;
+}
+.grand .forme .labs label{
+  display: block;
+  margin: 0.4em;
+
 }
 .grand .forme .labs{
   /* à enlever  */
@@ -38,24 +42,27 @@
   font-weight: bold;
   text-decoration: underline;
 }
-/* .grand .forme .champs{
-  border: 1px solid black;
+/*à enlever
+ .grand .forme .champs{
+   border: 1px solid black;
 } */
 .grand .forme .champs input{
   width: 30em ;
   height: 2.2em;
   border-radius: 10px;
   padding: 1px;
+  margin: 1em;
   border: 1px solid #00FF00;
+  display: block;
 }
 form{
+/*à enlever*/
+
   /* border: 1px solid black; */
   width: 60%;
   margin-bottom: 2em;
   background-color: #D9D9D9;
   border-radius: 15px;
-  /* box-shadow: 0px 3px rgba(100, 100, 100, 0.397), 0em 0em ; */
-
 }
 .grand .valid{
   /* à enlever  */

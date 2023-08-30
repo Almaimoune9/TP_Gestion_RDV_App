@@ -5,14 +5,14 @@
     <div class="forme">
       <!-- Les labels  -->
       <div class="labs">
-        <label for="prenom">Prénom :</label><br><br>
-        <label for="nom">Nom :</label><br><br>
-        <label for="sexe">Sexe :</label><br><br>
-        <label for="naissance">Date de naissance :</label><br><br>
-        <label for="tel">Téléphone :</label><br><br>
-        <label for="email">Email :</label><br><br>
-        <label for="pass">Mot de passe :</label><br><br>
-        <label for="confime">Confimer :</label><br><br>
+        <label for="prenom">Prénom :</label>
+        <label for="nom">Nom :</label>
+        <label for="sexe">Sexe :</label>
+        <label for="naissance">Date de naissance :</label>
+        <label for="tel">Téléphone :</label>
+        <label for="email">Email :</label>
+        <label for="pass">Mot de passe :</label>
+        <label for="confime">Confimer :</label>
       </div>
       <!-- Les champs  -->
       <div class="champs">
@@ -22,39 +22,38 @@
           pattern="[A-Za-z]+"
           #prenomVar="ngModel"
           [ngClass]="{'invalid-field':prenomVar.invalid && prenomVar.touched}">
-          <br><br>
 
         <input type="text" name="nom"
           [(ngModel)]="patient.nom" required
           pattern="[A-Za-z]+"
           #nomVar="ngModel"
-          [ngClass]="{'invalid-field':nomVar.invalid && nomVar.touched}"><br><br>
+          [ngClass]="{'invalid-field':nomVar.invalid && nomVar.touched}">
 
           <!-- La proprieté "^(M|F)$" autorise uniquement M ou F  -->
         <input type="text" name="sexe"
           [(ngModel)]="patient.sexe" required
           pattern="^(M|F)$"
           #sexeVar="ngModel"
-          [ngClass]="{'invalid-field':sexeVar.invalid && sexeVar.touched}"><br><br>
+          [ngClass]="{'invalid-field':sexeVar.invalid && sexeVar.touched}">
 
         <!-- La proprieté "\d{4}-\d{2}-\d{2}" autirise uniquement les types date  -->
         <input type="text" name="naissance"
         [(ngModel)]="patient.naissance" required
         pattern="\d{4}-\d{2}-\d{2}"
         #naissanceVar="ngModel"
-        [ngClass]="{'invalid-field': naissanceVar.invalid && naissanceVar.touched}"><br><br>
+        [ngClass]="{'invalid-field': naissanceVar.invalid && naissanceVar.touched}">
                 <!-- Champ de téléphone -->
         <input type="tel" name="tel"
         [(ngModel)]="patient.telephone" required
         #telVar="ngModel"
         pattern="\d{8}"
-        [ngClass]="{'invalid-field': telVar.invalid && telVar.touched}"><br><br>
+        [ngClass]="{'invalid-field': telVar.invalid && telVar.touched}">
 
         <input type="email" name="mail"
        [(ngModel)]="patient.email" required
        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
        #mailVar="ngModel"
-       [ngClass]="{'invalid-field': mailVar.invalid && mailVar.touched}"><br><br>
+       [ngClass]="{'invalid-field': mailVar.invalid && mailVar.touched}">
 
 
               <!-- Champ de mot de passe -->
@@ -62,15 +61,14 @@
       [(ngModel)]="patient.pass" required
       #passVar="ngModel"
       [ngClass]="{'invalid-field': passVar.invalid && passVar.touched}"
-      (input)="validatePasswordConfirmation()"><br><br>
+      (input)="validatePasswordConfirmation()">
 
       <!-- Champ de confirmation de mot de passe -->
       <input type="password" name="confirme"
       [(ngModel)]="patient.confirme" required
       #confirmeVar="ngModel"
       [ngClass]="{'invalid-field': confirmeVar.invalid && confirmeVar.touched}"
-      (input)="validatePasswordConfirmation()"><br><br>
-
+      (input)="validatePasswordConfirmation()">
 
       </div>
 

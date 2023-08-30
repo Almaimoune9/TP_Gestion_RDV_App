@@ -1,41 +1,101 @@
 
 <div class="grand">
-    <!-- formulaire d'inscriotion patient  -->
-    <form action="">
-      <div class="forme">
-        <!-- Les labels  -->
-        <div class="labs">
-          <label for="prenom" name="prenom">Prénom :</label><br><br>
-          <label for="nom" name="nom">Nom :</label><br><br>
-          <label for="sexe" name="sexe">Sexe :</label><br><br>
-          <label for="tel" name="tel">Téléphone :</label><br><br>
-          <label for="specialite" name="specialite">Spécialite</label><br><br>
-          <label for="email" name="mail">Email :</label><br><br>
-          <label for="pass" name="pass">Mot de passe :</label><br><br>
-          <label for="confime" name="confime">Confimer :</label><br><br>
-        </div>
-        <!-- Les champs  -->
-        <div class="champs">
-          <input type="text" name="prenom"><br><br>
-          <input type="text" name="nom"><br><br>
-          <input type="text" name="sexe"><br><br>
-          <input type="text" name="specialite"><br><br>
-          <input type="tel" name="tel"><br><br>
-          <input type="email" name="mail"><br><br>
-          <input type="password" name="pass"><br><br>
-          <input type="password" name="confime"><br><br>
-  
-        </div>
-  
+  <!-- formulaire d'inscriotion patient  -->
+  <form novalidate (ngSubmit)="EnregitreDonneMed(patientForm)" #patientForm="ngForm">
+    <div class="forme">
+      <!-- Les labels  -->
+      <div class="labs">
+        <label for="prenom">Prénom :</label>
+        <label for="nom">Nom :</label>
+        <label for="sexe">Sexe :</label>
+        <label for="naissance">Date de naissance :</label>
+        <label for="tel">Téléphone :</label>
+        <label for="email">Email :</label>
+        <label for="pass">Mot de passe :</label>
+        <label for="confime">Confimer :</label>
       </div>
-      <div class="valid">
-        <input routerLink="Liste_medecin" type="submit" value="valider">
+      <!-- Les champs  -->
+      <div class="champs">
+
+        <input type="text" name="prenom"
+          [(ngModel)]="medecin.prenom" required
+          pattern="[A-Za-z]+"
+          #prenomVar="ngModel"
+          [ngClass]="{'invalid-field':prenomVar.invalid && prenomVar.touched}">
+
+        <input type="text" name="nom"
+          [(ngModel)]="medecin.nom" required
+          pattern="[A-Za-z]+"
+          #nomVar="ngModel"
+          [ngClass]="{'invalid-field':nomVar.invalid && nomVar.touched}">
+
+          <input type="text" name="specialite"
+          [(ngModel)]="medecin.prenom" required
+          pattern="[A-Za-z]+"
+          #specialiteVar="ngModel"
+          [ngClass]="{'invalid-field':specialiteVar.invalid && specialiteVar.touched}">
+
+                <!-- Champ de téléphone -->
+        <input type="tel" name="tel"
+        [(ngModel)]="medecin.telephone" required
+        #telVar="ngModel"
+        pattern="\d{8}"
+        [ngClass]="{'invalid-field': telVar.invalid && telVar.touched}">
+
+        <input type="email" name="mail"
+       [(ngModel)]="medecin.email" required
+       pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
+       #mailVar="ngModel"
+       [ngClass]="{'invalid-field': mailVar.invalid && mailVar.touched}">
+
+
+              <!-- Champ de mot de passe -->
+      <input type="password" name="pass"
+      [(ngModel)]="medecin.pass" required
+      #passVar="ngModel"
+      [ngClass]="{'invalid-field': passVar.invalid && passVar.touched}"
+      (input)="validatePasswordConfirmation()">
+
+      <!-- Champ de confirmation de mot de passe -->
+      <input type="password" name="confirme"
+      [(ngModel)]="medecin.confirme" required
+      #confirmeVar="ngModel"
+      [ngClass]="{'invalid-field': confirmeVar.invalid && confirmeVar.touched}"
+      (input)="validatePasswordConfirmation()">
+
       </div>
-    </form>
-  
-    <!-- image  -->
-    <div class="photo">
-      <img src="../assets/img/medecin.png" alt="">
+
     </div>
+    <div class="valid">
+      <!-- <input type="submit" value="valider"> -->
+      <div *ngIf="prenomVar.invalid && prenomVar.touched" class="error-message" style="color: red;">
+        Veillez bien renseigner le cahmp prenom.
+      </div>
+      <div *ngIf="nomVar.invalid && nomVar.touched" class="error-message" style="color: red;">
+        Veillez bien renseigner le cahmp nom.
+      </div>
+      <div *ngIf="specialiteVar.invalid && specialiteVar.touched" class="error-message" style="color: red;">
+        Veillez bien renseigner le cahmp specialite.
+      </div>
+
+      <div *ngIf="telVar.invalid && telVar.touched" class="error-message" style="color: red;">
+        Le champs telephone prend uniquement les numeros de téléphone à 8 chiffres.
+      </div>
+      <div *ngIf="mailVar.invalid && mailVar.touched" class="error-message" style="color: red;">
+        Veillez bien renseigner votre mail.
+      </div>
+      <!-- Afficher un message d'erreur si la confirmation de mot de passe ne correspond pas -->
+      <div *ngIf="passwordsDoNotMatch" class="error-message" style="color: red;">
+        Les mots de passe ne correspondent pas.
+      </div>
+      <button type="submit">valider</button>
+    </div>
+
+  </form>
+  <div><a routerLink="/Liste_Medecin"> Liste medecins</a></div>
+
+  <!-- image  -->
+  <div class="photo">
+    <img src="../assets/img/medecin.png" alt="">
   </div>
-  
+</div>

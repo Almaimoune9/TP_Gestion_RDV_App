@@ -31,6 +31,7 @@ header {
 header ul {
   display: flex;
   list-style-type: none;
+  padding-right: 1em;
 }
 
 header ul li a {
@@ -55,7 +56,7 @@ footer .pri {
 }
 
 footer .pri .sec {
-  margin: 0.5em;
+  /* margin: 0.5em; */
   display: flex;
   justify-content: space-between;
 }
@@ -69,14 +70,16 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 1em;
 }
 
 footer.image {
   width: 10%;
+  align-items: center;
 }
 
 footer .image img {
-  width: 4em;
+  width: 5em;
   height: auto;
 }
 
@@ -90,6 +93,9 @@ footer a, .dif a {
   font-size:1.3em;
   font-weight: bolder;
 
+}
+.dif{
+  padding-right: 1.5em;
 }
 
 .dif a {
@@ -120,8 +126,8 @@ mat-mdc-dialog-surface {
 
 
 
-.cdk-overlay-pane {
+/* .cdk-overlay-pane {
   position: absolute;
   height: 150px;
   left: 0;
-}
+} */

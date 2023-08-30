@@ -16,7 +16,7 @@ li{
 .side-menu{
   position: fixed;
   background: #D8D9D8;
-  width: 22%;
+  width: 25%;
   min-height: 70%;
   margin-top: 0%;
   margin-left: -10px;
@@ -34,7 +34,8 @@ li{
 }
 .side-menu li:hover{
   background: white;
-  border-radius: 10px;
+  border-radius: 25px;
+  width: 90%;
 }
 .side-menu li a:hover{
   color: #008000;
@@ -46,23 +47,30 @@ li{
 input{
   color: #FFFFFF;
   margin-left: 25%;
-  margin-top: 30%;
+  margin-top: 40%;
   background: #008000;
   width : 40%;
   padding: 2%;
-  border-radius: 30px;
+  border-radius: 10px;
   text-decoration: none;
+  border: none;
+}
+input:hover{
+  background-color: #04b604;
+  color: red;
 }
 .calendrier{
   width: 75%;
   margin-left: 24%;
+
 }
 .calendrierMois{
   font-size: 15px;
   padding: 2px 20px;
-  color: black;
+  height: 35em;
   width: 76%;
   font-weight: 600;
   height: 400px;
   position: fixed;
 }
+

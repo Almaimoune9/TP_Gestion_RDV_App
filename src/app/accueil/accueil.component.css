@@ -1,7 +1,7 @@
 
 
 /* .text {
-   
+
     align-items: center;
 } */
 /*Style pour le container*/
@@ -33,6 +33,7 @@
     top: 18%;
     z-index: 2;
 }
+
 
 @media only screen and (max-width:700px){
     .container{

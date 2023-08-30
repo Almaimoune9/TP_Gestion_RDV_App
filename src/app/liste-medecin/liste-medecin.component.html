@@ -1,30 +1,30 @@
 <div class="side-menu">
-    <ul>
-        <li>Mes rendez-vous</li>
-        <li>Donner un rendez-vous</li>
-        <li>Ajouter patient</li>
-        <li>Liste des patients</li>
-        <li>Liste des medecins</li>
-        <li>Créer des articles</li>
-        <input type="submit" value="Déconnexion" >
-    </ul>
+  <ul>
+      <li>Mes rendez-vous</li>
+      <li>Donner un rendez-vous</li>
+      <li>Ajouter patient</li>
+      <li>Liste des patients</li>
+      <li>Liste des medecins</li>
+      <li>Créer des articles</li>
+      <input type="submit" value="Déconnexion" >
+  </ul>
 </div>
 <div class="table">
-    <h2>La liste des medecins</h2>
+  <h2>La liste des medecins</h2>
 <table>
-    <tr>
-      <th>NOM</th>
-      <th>PRENOM</th>
-      <th>TELEPHONE</th>
-      <th>EMAIL</th>
-      <th>SPECIALITE</th>
-    </tr>
-    <tr *ngFor="let i of data ">
-        <td>{{i.nom}}</td>
-        <td>{{i.prenom}}</td>
-        <td>{{i.telephone}}</td>
-        <td>{{i.email}}</td>
-        <td>{{i.specialite}}</td>
-    </tr>
-  </table>
+  <tr>
+    <th>PRENOM</th>
+    <th>NOM</th>
+    <th>TELEPHONE</th>
+    <th>EMAIL</th>
+    <th>SPECIALITE</th>
+  </tr>
+  <tr *ngFor="let medecin of listMedecin">
+    <td>{{medecin.prenom}}</td>
+    <td>{{medecin.nom}}</td>
+    <td>{{medecin.telephone}}</td>
+    <td>{{medecin.email}}</td>
+    <td>{{medecin.specialite}}</td>
+  </tr>
+</table>
 </div>
