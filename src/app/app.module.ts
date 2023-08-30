@@ -2,12 +2,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FullCalendarModule } from '@fullcalendar/angular'; //pour full callendar
 import { FormsModule } from '@angular/forms'; // Importez FormsModule
-//  import { ReactiveFormsModule } from '@angular/forms'; //importation de reactive forme module
-import {MatDialogModule} from '@angular/material/dialog'; 
+import { ReactiveFormsModule } from '@angular/forms'; //importation de reactive forme module
+import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
-
+import {HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {ToastrModule} from 'ngx-toastr'
 
 import { AjoutMedecinComponent } from './ajout-medecin/ajout-medecin.component';
 import { ListePatientComponent } from './liste-patient/liste-patient.component';
@@ -21,6 +22,9 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { StatutComponent } from './statut/statut.component';
 import { RendezVousMedecinComponent } from './rendez-vous-medecin/rendez-vous-medecin.component';
 import { DonnerRendezVousComponent } from './donner-rendez-vous/donner-rendez-vous.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from 'src/material.mode';
+import { ConnexionMedecinComponent } from './connexion-medecin/connexion-medecin.component';
 
 
 @NgModule({
@@ -38,6 +42,7 @@ import { DonnerRendezVousComponent } from './donner-rendez-vous/donner-rendez-vo
     StatutComponent,
     RendezVousMedecinComponent,
     DonnerRendezVousComponent,
+    ConnexionMedecinComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,12 @@ import { DonnerRendezVousComponent } from './donner-rendez-vous/donner-rendez-vo
     FormsModule,// Ajoutez FormsModule ici
     // ReactiveFormsModule //reactive forme module,
     MatDialogModule, 
-    MatButtonModule,
+    MatButtonModule, 
+    BrowserAnimationsModule,
+    MaterialModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    ToastrModule.forRoot()
   ],
   exports:[
     MatDialogModule,

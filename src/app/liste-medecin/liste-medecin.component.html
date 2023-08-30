@@ -1,12 +1,11 @@
 <div class="side-menu">
     <ul>
-        <li>Mes rendez-vous</li>
-        <li>Donner un rendez-vous</li>
-        <li>Ajouter patient</li>
-        <li>Liste des patients</li>
-        <li>Liste des medecins</li>
+        <li routerLink="/Rendez_vous_medecin">Mes rendez-vous</li>
+        <li routerLink="/Ajouter_Patient">Ajouter patient</li>
+        <li routerLink="/Liste_Patient">Liste des patients</li>
+        <li routerLink="/Liste_Medecin">Liste des medecins</li>
         <li>Créer des articles</li>
-        <input type="submit" value="Déconnexion" >
+        <input routerLink="/Connexion" type="submit" value="Déconnexion" >
     </ul>
 </div>
 <div class="table">
@@ -18,13 +17,6 @@
       <th>TELEPHONE</th>
       <th>EMAIL</th>
       <th>SPECIALITE</th>
-    </tr>
-    <tr *ngFor="let i of data ">
-        <td>{{i.nom}}</td>
-        <td>{{i.prenom}}</td>
-        <td>{{i.telephone}}</td>
-        <td>{{i.email}}</td>
-        <td>{{i.specialite}}</td>
     </tr>
   </table>
 </div>

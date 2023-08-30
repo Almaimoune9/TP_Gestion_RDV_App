@@ -19,12 +19,12 @@
       <th>EMAIL</th>
       <th>SEXE</th>
     </tr>
-    <tr>
-      <td>Giraud</td>
-      <td>Pierre</td>
-      <td>93080743</td>
-      <td>mp@gmail.com</td>
-      <td>Masculin</td>
+    <tr *ngFor="let patient of listPatient">
+      <td>{{patient.nom}}</td>
+      <td>{{patient.prenom}}</td>
+      <td>{{patient.telephone}}</td>
+      <td>{{patient.email}}</td>
+      <td>{{patient.sexe}}</td>
     </tr>
   </table>
 </div>

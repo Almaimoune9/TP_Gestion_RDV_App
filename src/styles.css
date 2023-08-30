@@ -4,39 +4,24 @@ body{
     color: black;
     font-weight: 400;
 }
-/* .mdc-dialog__container,
-.mdc-dialog__surface {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    right: 0;
-    width: 30%;
-    min-height: 20%;
-}
-.mat-mdc-dialog-container {
-    position: relative;
-    min-height: 30%;
-}
-
-.mat-mdc-dialog-surface {
-    min-height: 30px;
-}
-
-/* .mdc-dialog, .mdc-dialog__scrim {
-    height: 20%;
-} */ */
 
 .cdk-global-overlay-wrapper {
     position: relative;
 }
 
 .cdk-overlay-pane {
-    position: absolute;
+    position: fixed;
     width: 50%;
     height: 450px;
-    margin-left: 25%;
+    margin-left: 20%;
     border-radius: 20px;
  }
 
 
+ .mat-typography {
+    line-height: normal; 
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 

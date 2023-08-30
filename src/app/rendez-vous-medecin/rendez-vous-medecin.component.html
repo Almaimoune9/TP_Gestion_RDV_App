@@ -2,15 +2,15 @@
 <div class="side-menu">
     <ul>
         <li>Mes rendez-vous</li>
-        <li class="container1" (click)="Openpopup()"  mat-raised-button color="primary">Donner un rendez-vous</li>
-        <li>Ajouter patient</li>
-        <li>Liste des patients</li>
-        <li>Liste des medecins</li>
+        <li (click)="Openpopup()">Donner un rendez-vous</li>
+        <li routerLink="/Ajouter_Medecin">Ajouter patient</li>
+        <li routerLink="/Liste_Patient">Liste des patients</li>
+        <li routerLink="/Liste_Medecin">Liste des medecins</li>
         <li>Créer des articles</li>
-        <input type="submit" value="Déconnexion" >
+        <input routerLink="/Connexion" type="submit" value="Déconnexion">
     </ul>
 </div>
 <div class="calendrier">
-    <h2>Les rendez-vous du mois de </h2>
+    <h2 style="position: fixed; margin-left: 11px;">Les rendez-vous du mois de </h2><br>
     <full-calendar class="calendrierMois" [options]="calendarOptions"></full-calendar>
 </div>

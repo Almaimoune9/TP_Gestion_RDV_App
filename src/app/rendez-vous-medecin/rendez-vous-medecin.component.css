@@ -23,7 +23,7 @@ li{
     border-radius: 2%;
 }
 .side-menu li{
-    font-size: 25px;
+    font-size: 20px;
     padding: 5px 20px;
     color: black;
     width: 100%;
@@ -42,7 +42,7 @@ li{
 input{
     color: #FFFFFF;
     margin-left: 25%;
-    margin-top: 30%;
+    margin-top: 40%;
     background: #008000;
     width : 40%;
     padding: 2%;

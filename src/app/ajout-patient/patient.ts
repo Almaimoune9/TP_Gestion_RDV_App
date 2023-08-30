@@ -29,5 +29,5 @@ export class Patient {
     this.confirme = confirme;
     this.telephone = telephone;
   }
-  
+
 }
