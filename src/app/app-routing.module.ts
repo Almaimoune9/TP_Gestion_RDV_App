@@ -13,6 +13,7 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { StatutComponent } from './statut/statut.component';
 import { RendezVousMedecinComponent } from './rendez-vous-medecin/rendez-vous-medecin.component';
 import { DonnerRendezVousComponent } from './donner-rendez-vous/donner-rendez-vous.component';
+import { ConnexionMedecinComponent } from './connexion-medecin/connexion-medecin.component';
 
 
 const routes: Routes = [
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path:'Creation_rendez_vous', component: CreationRendezVousComponent},
   {path:'Detail_Rendez_vous',component:AfficherDetailRendezVousComponent},
   {path:"Connexion", component: ConnexionComponent},
-  {path: 'Statut', component: StatutComponent}
+  {path: 'Statut', component: StatutComponent},
+  {path: 'connexion_medecin', component: ConnexionMedecinComponent},
 
 ];
 

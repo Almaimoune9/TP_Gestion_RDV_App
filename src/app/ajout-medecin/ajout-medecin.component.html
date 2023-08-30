@@ -64,7 +64,6 @@
       (input)="validatePasswordConfirmation()">
 
       </div>
-
     </div>
     <div class="valid">
       <!-- <input type="submit" value="valider"> -->
@@ -99,3 +98,43 @@
     <img src="../assets/img/medecin.png" alt="">
   </div>
 </div>
+
+   <!-- <mat-card>
+    <mat-card-header>
+      <h1>Incrire Medecin</h1>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="example-form" [formGroup]="ajoutForm" (ngSubmit)="procedureAjout()">
+        <mat-form-field class="example-full-width">
+          <mat-label>Nom</mat-label>
+          <input matInput formControlName="nom">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Prenom</mat-label>
+          <input matInput formControlName="prenom">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Specialité</mat-label>
+          <input matInput formControlName="specialite">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput formControlName="email">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Mot de pass</mat-label>
+          <input type="password" matInput formControlName="motdepass">
+        </mat-form-field>
+        <div>
+          <mat-radio-group aria-label="sexe">
+            <mat-radio-button value="M">Masculin</mat-radio-button>
+            <mat-radio-button value="F">Feminin</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div>
+          <button routerLink="connexion_medecin" mat-raised-button color="primary">Valider</button>
+    <a routerLink="/connexion_medecin" mat-button color="accent">Login</a>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card> -->

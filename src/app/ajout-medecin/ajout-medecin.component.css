@@ -32,6 +32,7 @@
 .grand .forme .labs label{
   display: block;
   margin: 0.4em;
+  margin-bottom: 1.2em;
 
 }
 .grand .forme .labs{
@@ -51,9 +52,10 @@
   height: 2.2em;
   border-radius: 10px;
   padding: 1px;
-  margin: 1.5em;
+  margin: 1em;
   border: 1px solid #00FF00;
   display: block;
+  margin-bottom: 1.5em;
 }
 form{
 /*à enlever*/
