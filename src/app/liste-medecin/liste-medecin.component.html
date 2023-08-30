@@ -1,4 +1,5 @@
 <div class="side-menu">
+<<<<<<< HEAD
     <ul>
         <li routerLink="/Rendez_vous_medecin">Mes rendez-vous</li>
         <li routerLink="/Ajouter_Patient">Ajouter patient</li>
@@ -7,10 +8,22 @@
         <li>Créer des articles</li>
         <input routerLink="/Connexion" type="submit" value="Déconnexion" >
     </ul>
+=======
+  <ul>
+      <li>Mes rendez-vous</li>
+      <li>Donner un rendez-vous</li>
+      <li>Ajouter patient</li>
+      <li>Liste des patients</li>
+      <li>Liste des medecins</li>
+      <li>Créer des articles</li>
+      <input type="submit" value="Déconnexion" >
+  </ul>
+>>>>>>> f8defaaa493971d4d3816bb33dd96d367aa9a3f4
 </div>
 <div class="table">
-    <h2>La liste des medecins</h2>
+  <h2>La liste des medecins</h2>
 <table>
+<<<<<<< HEAD
     <tr>
       <th>NOM</th>
       <th>PRENOM</th>
@@ -20,3 +33,21 @@
     </tr>
   </table>
 </div>
+=======
+  <tr>
+    <th>PRENOM</th>
+    <th>NOM</th>
+    <th>TELEPHONE</th>
+    <th>EMAIL</th>
+    <th>SPECIALITE</th>
+  </tr>
+  <tr *ngFor="let medecin of listMedecin">
+    <td>{{medecin.prenom}}</td>
+    <td>{{medecin.nom}}</td>
+    <td>{{medecin.telephone}}</td>
+    <td>{{medecin.email}}</td>
+    <td>{{medecin.specialite}}</td>
+  </tr>
+</table>
+</div>
+>>>>>>> f8defaaa493971d4d3816bb33dd96d367aa9a3f4
