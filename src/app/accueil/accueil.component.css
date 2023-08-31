@@ -34,13 +34,4 @@
     z-index: 2;
 }
 
-@media only screen and (max-width:700px){
-    .container{
-        flex-direction: column-reverse;
-        margin: 50px;
-    }
-    .container2{
-        flex-basis: 100%;
-        margin-bottom: 50px;
-    }
-}
+

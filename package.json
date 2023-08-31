@@ -24,6 +24,7 @@
     "@fullcalendar/core": "^6.1.8",
     "@fullcalendar/daygrid": "^6.1.8",
     "@fullcalendar/interaction": "^6.1.8",
+    "ngx-bootstrap": "^11.0.2",
     "ngx-toaster": "^1.0.1",
     "ngx-toastr": "^17.0.2",
     "rxjs": "~7.8.0",

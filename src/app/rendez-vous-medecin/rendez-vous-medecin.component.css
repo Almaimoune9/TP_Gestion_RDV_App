@@ -1,12 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;   
-}
 
-body{
-    min-height: 100vh;
-}
 a{
     text-decoration: none;
 }
@@ -28,7 +20,7 @@ li{
     color: black;
     width: 100%;
     margin-top: 2%;
-    margin-left: -10px;
+    margin-left: 2px;
     font-weight: 600;
 }
 .side-menu li:hover{
@@ -42,7 +34,7 @@ li{
 input{
     color: #FFFFFF;
     margin-left: 25%;
-    margin-top: 40%;
+    margin-top: 30%;
     background: #008000;
     width : 40%;
     padding: 2%;
@@ -61,4 +53,18 @@ input{
     font-weight: 600;
     height: 400px;
     position: fixed;
+}
+
+.detail{
+    margin-top: 1%;
+    width: 50%;
+}
+.modal-header, .modal-body{
+    width: 50%; 
+    margin-left: 25%;
+    background: #070000;
+    color: #FFFFFF;
+}
+.button{
+    margin-left: 100%;
 }
