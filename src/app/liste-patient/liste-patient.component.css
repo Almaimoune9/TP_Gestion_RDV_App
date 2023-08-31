@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;   
+    box-sizing: border-box;
 }
 
 body{
@@ -31,6 +31,14 @@ li{
     margin-left: -10px;
     font-weight: 600;
 }
+.side-menu ul li a{
+  font-size: large;
+  color: #000;
+  margin-left: 0.5em;
+}
+.side-menu ul li a:hover{
+  color: #008000;
+}
 .side-menu li:hover{
     background: white;
     border-radius: 10px;
@@ -40,14 +48,20 @@ li{
     width: 100%;
 }
 input{
+
+    border: none;
     color: #FFFFFF;
     margin-left: 25%;
-    margin-top: 30%;
+    margin-top: 70%;
     background: #008000;
     width : 40%;
     padding: 2%;
     border-radius: 30px;
     text-decoration: none;
+}
+input:hover{
+  background-color: #049c04;
+  color: red;
 }
 .table{
     margin-left: 22%;
@@ -56,13 +70,13 @@ table{
     border-collapse: collapse;
     width: 100%;
   }
-  
+
   th, td{
     border: 1px solid black;
     padding: 10px;
   }
   th{
-    font-weight: 600;
+    font-weight: bolder;
   }
   h2{
     text-align: center;

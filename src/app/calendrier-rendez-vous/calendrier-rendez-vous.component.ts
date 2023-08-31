@@ -15,7 +15,7 @@ export class CalendrierRendezVousComponent {
 
 
   calendarPlugins = [dayGridPlugin]; // important!
-  tableeau: Rendezvous[] = [];
+  tableau: Rendezvous[] = [];
   event1 = new Rendezvous("Evénément 1","2023-08-29");
   // service.getRendezList [
   //   { title: 'event 1', date: '2023-08-29' },
@@ -25,10 +25,10 @@ export class CalendrierRendezVousComponent {
     initialView: 'dayGridMonth',
     plugins: [dayGridPlugin],
     locale: frLocale,
-    events: this.tableeau
+    events: this.tableau
   };
   constructor(private router: Router){
-    this.tableeau.push(this.event1);
+    this.tableau.push(this.event1);
   }
   deconnexion(){
     this.router.navigate(['/Connexion']);

@@ -33,12 +33,17 @@ export class AjoutMedecinComponent implements OnInit {
   }
 
   public EnregitreDonneMed(medecinForm:NgForm){
-    this.serviceMedecin.setMedecinInList(this.medecin);
+    if(medecinForm.form.valid){
+      this.serviceMedecin.setMedecinInList(this.medecin);
     console.log(medecinForm.form);
     console.log('value :' , JSON.stringify(medecinForm.value));
     this.router.navigate(['/Mes_rendez_vous']);
 
     console.log("On the right way");
+    }else{
+      console.log("veuillez bien remplire le formulair");
+    }
+
   }
   validatePasswordConfirmation() {
     this.passwordsDoNotMatch = this.medecin.pass !== this.medecin.confirme;

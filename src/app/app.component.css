@@ -90,16 +90,17 @@ footer .pri ul {
 footer a, .dif a {
   text-decoration: none;
   color: #000;
-  font-size:1.3em;
+  font-size:1.2em;
   font-weight: bolder;
 
 }
 .dif{
+  margin-top: 0.7em;
   padding-right: 1.5em;
 }
 
 .dif a {
-  font-size:1.3em;
+  font-size:1.2em;
   font-weight: bold;
 }
 
