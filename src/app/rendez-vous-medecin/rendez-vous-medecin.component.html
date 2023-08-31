@@ -1,4 +1,16 @@
-
+<div class="detail">
+    <ng-template #template>
+        <div class="modal-header">
+          <h4 class="modal-title pull-left">Detail du rendez-vous</h4>
+          <button type="button" class="button" aria-label="Close" (click)="modalRef?.hide()">
+            <span aria-hidden="true" class="visually-hidden">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Je vous donne rendez-vous le {{start | date}}
+        </div>
+      </ng-template>
+    </div>
 <div class="side-menu">
     <ul>
         <li>Mes rendez-vous</li>
@@ -8,7 +20,6 @@
         <li routerLink="/Ajouter_Medecin">Ajouter Medecin</li>
         <li routerLink="/Liste_Patient">Liste des patients</li>
         <li routerLink="/Liste_Medecin">Liste des medecins</li>
-
         <li>Créer des articles</li>
         <input routerLink="/Connexion" type="submit" value="Déconnexion">
     </ul>
@@ -16,18 +27,4 @@
 <div class="calendrier">
     <h2 style="position: fixed; margin-left: 11px;">Les rendez-vous du mois de </h2><br>
     <full-calendar class="calendrierMois" [options]="calendarOptions"></full-calendar>
-</div>
-<div class="detail">
-<ng-template #template>
-    <div class="modal-header">
-      <h4 class="modal-title pull-left">Modal</h4>
-      <button type="button" class="button" aria-label="Close"
-       (click)="modalRef?.hide()">
-        <span aria-hidden="true" class="visually-hidden">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      Je vous donne rendez-vous le {{start | date}}
-    </div>
-  </ng-template>
 </div>

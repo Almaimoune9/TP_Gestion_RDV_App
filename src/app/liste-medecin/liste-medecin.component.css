@@ -23,7 +23,6 @@ li{
   border-radius: 2%;
 }
 .side-menu li{
-
   font-size: 20px;
   padding: 5px 20px;
   color: black;
@@ -31,6 +30,7 @@ li{
   margin-top: 2%;
   margin-left: 2px;
   font-weight: 600;
+
 }
 .side-menu li:hover{
   background: white;

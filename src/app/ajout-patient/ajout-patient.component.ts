@@ -24,17 +24,22 @@ export class AjoutPatientComponent implements OnInit{
   }
 
   public EnregitreDonne (patientForm :NgForm){
+    if(patientForm.form.valid){
+
     this.servicePatient.setPatientInList(this.patient);
     console.log(patientForm.form);
     console.log('value :' , JSON.stringify(patientForm.value));
     this.router.navigate(['/Mes_rendez_vous']);
 
     console.log("On the right way");
+  }else{
+   console.log("veuiller bien remplire la formulaire");
+  }
+
   }
   validatePasswordConfirmation() {
     this.passwordsDoNotMatch = this.patient.pass !== this.patient.confirme;
   }
-
 
 
 }

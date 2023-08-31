@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-creation-rendez-vous',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class CreationRendezVousComponent {
 
+  constructor(private dialogRef :MatDialog){
+  }
+
+
+  closepopup(){
+    this.dialogRef.closeAll();
+  }
 }

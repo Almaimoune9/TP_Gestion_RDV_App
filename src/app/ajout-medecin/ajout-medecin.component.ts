@@ -1,5 +1,4 @@
 
-// import { AutMedecinService } from '../aut-medecin.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Medecin } from './medecin';
@@ -33,6 +32,7 @@ import { Router } from '@angular/router';
   //     this.router.navigate(['connexion_Medecin']);
   //   }
   // }
+
 export class AjoutMedecinComponent implements OnInit {
   public passwordsDoNotMatch : boolean=false;
   serviceMedecin:MedecinService;
@@ -56,12 +56,17 @@ export class AjoutMedecinComponent implements OnInit {
   }
 
   public EnregitreDonneMed(medecinForm:NgForm){
-    this.serviceMedecin.setMedecinInList(this.medecin);
+    if(medecinForm.form.valid){
+      this.serviceMedecin.setMedecinInList(this.medecin);
     console.log(medecinForm.form);
     console.log('value :' , JSON.stringify(medecinForm.value));
     this.router.navigate(['/Mes_rendez_vous']);
 
     console.log("On the right way");
+    }else{
+      console.log("veuillez bien remplire le formulair");
+    }
+
   }
   validatePasswordConfirmation() {
     this.passwordsDoNotMatch = this.medecin.pass !== this.medecin.confirme;

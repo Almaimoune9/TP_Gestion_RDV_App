@@ -9,11 +9,7 @@ import {HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {ToastrModule} from 'ngx-toastr';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import interactionPlugin from '@fullcalendar/interaction';
 import { AccordionModule } from 'ngx-bootstrap/accordion'
-
-
 
 
 
@@ -59,8 +55,8 @@ import { CommonModule } from '@angular/common';
     FormsModule,
     // Ajoutez FormsModule ici
     // ReactiveFormsModule //reactive forme module,
-    MatDialogModule, 
-    MatButtonModule, 
+    MatDialogModule,
+    MatButtonModule,
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
@@ -76,3 +72,4 @@ import { CommonModule } from '@angular/common';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

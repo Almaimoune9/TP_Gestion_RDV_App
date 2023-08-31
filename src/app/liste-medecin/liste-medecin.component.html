@@ -8,18 +8,17 @@
         <li>Créer des articles</li>
         <input routerLink="/Connexion" type="submit" value="Déconnexion" >
     </ul>
-
 </div>
 <div class="table">
   <h2>La liste des medecins</h2>
 <table>
-
   <tr>
     <th>PRENOM</th>
     <th>NOM</th>
     <th>TELEPHONE</th>
     <th>EMAIL</th>
     <th>SPECIALITE</th>
+    <th>Actions</th>
   </tr>
   <tr *ngFor="let medecin of listMedecin">
     <td>{{medecin.prenom}}</td>
@@ -27,6 +26,11 @@
     <td>{{medecin.telephone}}</td>
     <td>{{medecin.email}}</td>
     <td>{{medecin.specialite}}</td>
+    <td>
+      <button style="color: green;">Edit</button>
+      <button style="color: rgb(255, 0, 0);">Sup</button>
+    </td>
   </tr>
 </table>
 </div>
+

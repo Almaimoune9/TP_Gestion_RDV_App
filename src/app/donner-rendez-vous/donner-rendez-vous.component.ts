@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
+
 
 
 @Component({
@@ -7,13 +8,28 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
   templateUrl: './donner-rendez-vous.component.html',
   styleUrls: ['./donner-rendez-vous.component.css'],
 })
-export class DonnerRendezVousComponent {
+export class DonnerRendezVousComponent implements OnInit {
 
-  constructor(private ref:MatDialogRef<DonnerRendezVousComponent>){
+  newEvent = {
+    date: '',
+    time: '',
+    patient: '',
+    motif: ''
+  };
 
+  constructor(
+    private dialogRef: MatDialogRef<DonnerRendezVousComponent>
+  ) {}
+
+  ngOnInit() {
+    // Any initialization code here
   }
-  
-  closepopup(){
-    this.ref.close();
+
+  closepopupdetail() {
+    this.dialogRef.close(); // Close the dialog
+  }
+
+  createAppointment() {
+    this.dialogRef.close();
   }
 }

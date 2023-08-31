@@ -1,6 +1,5 @@
 
 <div class="grand">
-
   <!-- formulaire d'inscriotion patient  -->
   <form novalidate (ngSubmit)="EnregitreDonneMed(patientForm)" #patientForm="ngForm">
     <div class="forme">
@@ -9,7 +8,7 @@
         <label for="prenom">Prénom :</label>
         <label for="nom">Nom :</label>
         <label for="sexe">Sexe :</label>
-        <label for="naissance">Date de naissance :</label>
+        <label for="naissance">Specialité :</label>
         <label for="tel">Téléphone :</label>
         <label for="email">Email :</label>
         <label for="pass">Mot de passe :</label>
@@ -65,7 +64,6 @@
       (input)="validatePasswordConfirmation()">
 
       </div>
-
     </div>
     <div class="valid">
       <!-- <input type="submit" value="valider"> -->
@@ -100,6 +98,8 @@
     <img src="../assets/img/medecin.png" alt="">
   </div>
    
+</div>
+
    <!-- <mat-card>
     <mat-card-header>
       <h1>Incrire Medecin</h1>
@@ -139,4 +139,3 @@
       </form>
     </mat-card-content>
   </mat-card> -->
-</div>

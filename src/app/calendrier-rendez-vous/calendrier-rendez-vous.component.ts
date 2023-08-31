@@ -4,6 +4,8 @@ import { CalendarOptions } from '@fullcalendar/core/';
 import frLocale from '@fullcalendar/core/locales/fr';
 import dayGridPlugin from '@fullcalendar/daygrid'; // important!
 import { Rendezvous } from '../rendezvous';
+import { MatDialog } from '@angular/material/dialog';
+import { CreationRendezVousComponent } from '../creation-rendez-vous/creation-rendez-vous.component';
 
 @Component({
   selector: 'app-calendrier-rendez-vous',
@@ -15,7 +17,7 @@ export class CalendrierRendezVousComponent {
 
 
   calendarPlugins = [dayGridPlugin]; // important!
-  tableeau: Rendezvous[] = [];
+  tableau: Rendezvous[] = [];
   event1 = new Rendezvous("Evénément 1","2023-08-29");
   // service.getRendezList [
   //   { title: 'event 1', date: '2023-08-29' },
@@ -25,13 +27,18 @@ export class CalendrierRendezVousComponent {
     initialView: 'dayGridMonth',
     plugins: [dayGridPlugin],
     locale: frLocale,
-    events: this.tableeau
+    events: this.tableau
   };
-  constructor(private router: Router){
-    this.tableeau.push(this.event1);
+  
+  constructor(private router: Router,private dialogRef:MatDialog){
+    this.tableau.push(this.event1);
   }
   deconnexion(){
     this.router.navigate(['/Connexion']);
+  }
+//______________________________pour le popup____________________________
+  openDialog(){
+    this.dialogRef.open(CreationRendezVousComponent);
   }
 
 }

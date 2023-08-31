@@ -1,1 +1,13 @@
-<p>afficher-detail-rendez-vous works!</p>
+<h1 mat-dialog-title> Détails du rendez-vous </h1>
+
+<div mat-dialog-content class="details">
+  <p>Date : {{ data.date }}</p>
+  <p>Heure : {{ data.time }}</p>
+  <p>Patient : {{ data.patient }}</p>
+  <p>Motif : {{ data.motif }}</p>
+</div>
+
+<div mat-dialog-actions class="btn">
+  <button (click)="closepopupdetail()" style="margin-right: 40%;">Fermez</button>
+  <button>Valider</button>
+</div>

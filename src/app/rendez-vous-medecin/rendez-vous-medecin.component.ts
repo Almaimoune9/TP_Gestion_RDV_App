@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
 import { CalendarOptions } from '@fullcalendar/core'; // useful for typechecking
 import dayGridPlugin from '@fullcalendar/daygrid';
 import { MatDialog } from '@angular/material/dialog';
@@ -7,6 +7,7 @@ import frLocale from '@fullcalendar/core/locales/fr';
 import { DonnerRendezVousComponent } from '../donner-rendez-vous/donner-rendez-vous.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { AfficherDetailRendezVousComponent } from '../afficher-detail-rendez-vous/afficher-detail-rendez-vous.component';
 
 
 @Component({
@@ -43,11 +44,11 @@ export class RendezVousMedecinComponent implements OnInit {
 
   }
   
+  //Popup pour donner un rendez-vous
   Openpopup(){
     if (!this.popupAffiche) {
 
       const dialogRef = this._dialog.open(DonnerRendezVousComponent,{
-      
     });
     dialogRef.afterClosed().subscribe(() => {
       // Le popup a été fermé, réinitialiser la variable
@@ -57,6 +58,8 @@ export class RendezVousMedecinComponent implements OnInit {
     this.popupAffiche = true;
   }
 }
+//Popup pour afficher les details du rendez-vous
+
 //Fonction forEach
 ngOnInit(): void {
   this.events.forEach((e: { [x:string]: string; }) => {
@@ -67,14 +70,30 @@ ngOnInit(): void {
     }
   });
 
-  console.log('Present ' + this.presentDays);
-  console.log('Absent ' + this.absentDays);
 }
-handleDateClick(arg: any) {
-  console.log(arg);
-  console.log(arg.event._def.title);
-  this.title = arg.event._def.title;
-  this.start = arg.event.start;
-  this.modalRef= this.modalService.show(this.template, this.config);
+handleDateClick( event:any) {
+//   if (!this.popupAffiche) {
+
+//     const dialogRef = this._dialog.open(AfficherDetailRendezVousComponent,{
+//   });
+//   dialogRef.afterClosed().subscribe(() => {
+//     // Le popup a été fermé, réinitialiser la variable
+//     this.popupAffiche = false;
+//   });
+
+//   this.popupAffiche = true;
+// }
+if (!this.popupAffiche) {
+  const dialogRef = this._dialog.open(AfficherDetailRendezVousComponent, {
+    data: event, // Pass the event details to the dialog
+  });
+
+  dialogRef.afterClosed().subscribe(() => {
+    // Le popup a été fermé, réinitialiser la variable
+    this.popupAffiche = false;
+  });
+
+  this.popupAffiche = true;
+}
 }
 }
