@@ -1,34 +1,6 @@
 
 <div class="grand">
-<<<<<<< HEAD
 
-    <form action="">
-      <div class="forme">
-
-        <div class="labs">
-          <label for="prenom" name="prenom">Prénom :</label><br><br>
-          <label for="nom" name="nom">Nom :</label><br><br>
-          <label for="sexe" name="sexe">Sexe :</label><br><br>
-          <label for="tel" name="tel">Téléphone :</label><br><br>
-          <label for="specialite" name="specialite">Spécialite</label><br><br>
-          <label for="email" name="mail">Email :</label><br><br>
-          <label for="pass" name="pass">Mot de passe :</label><br><br>
-          <label for="confime" name="confime">Confirmer :</label><br><br>
-        </div>
-
-        <div class="champs">
-          <input type="text" name="prenom"><br><br>
-          <input type="text" name="nom"><br><br>
-          <input type="text" name="sexe"><br><br>
-          <input type="text" name="specialite"><br><br>
-          <input type="tel" name="tel"><br><br>
-          <input type="email" name="mail"><br><br>
-          <input type="password" name="pass"><br><br>
-          <input type="password" name="confime"><br><br>
-  
-        </div>
-  
-=======
   <!-- formulaire d'inscriotion patient  -->
   <form novalidate (ngSubmit)="EnregitreDonneMed(patientForm)" #patientForm="ngForm">
     <div class="forme">
@@ -42,7 +14,6 @@
         <label for="email">Email :</label>
         <label for="pass">Mot de passe :</label>
         <label for="confime">Confimer :</label>
->>>>>>> f8defaaa493971d4d3816bb33dd96d367aa9a3f4
       </div>
       <!-- Les champs  -->
       <div class="champs">
@@ -94,15 +65,7 @@
       (input)="validatePasswordConfirmation()">
 
       </div>
-<<<<<<< HEAD
-    </form>
-  
 
-    <div class="photo">
-      <img src="../assets/img/medecin.png" alt="">
-=======
-
->>>>>>> f8defaaa493971d4d3816bb33dd96d367aa9a3f4
     </div>
     <div class="valid">
       <!-- <input type="submit" value="valider"> -->
@@ -126,7 +89,7 @@
       <div *ngIf="passwordsDoNotMatch" class="error-message" style="color: red;">
         Les mots de passe ne correspondent pas.
       </div>
-      <button type="submit">valider</button>
+      <button routerLink="/Liste_Medecin" type="submit">valider</button>
     </div>
 
   </form>
@@ -136,7 +99,6 @@
   <div class="photo">
     <img src="../assets/img/medecin.png" alt="">
   </div>
-<<<<<<< HEAD
    
    <!-- <mat-card>
     <mat-card-header>
@@ -177,6 +139,4 @@
       </form>
     </mat-card-content>
   </mat-card> -->
-=======
 </div>
->>>>>>> f8defaaa493971d4d3816bb33dd96d367aa9a3f4

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
 import { FullCalendarModule } from '@fullcalendar/angular'; //pour full callendar
 import { FormsModule } from '@angular/forms'; // Importez FormsModule
 import { ReactiveFormsModule } from '@angular/forms'; //importation de reactive forme module
@@ -8,7 +8,14 @@ import {MatButtonModule} from '@angular/material/button';
 import {HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {ToastrModule} from 'ngx-toastr'
+import {ToastrModule} from 'ngx-toastr';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import interactionPlugin from '@fullcalendar/interaction';
+import { AccordionModule } from 'ngx-bootstrap/accordion'
+
+
+
+
 
 import { AjoutMedecinComponent } from './ajout-medecin/ajout-medecin.component';
 import { ListePatientComponent } from './liste-patient/liste-patient.component';
@@ -25,7 +32,8 @@ import { DonnerRendezVousComponent } from './donner-rendez-vous/donner-rendez-vo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from 'src/material.mode';
 import { ConnexionMedecinComponent } from './connexion-medecin/connexion-medecin.component';
-
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -48,7 +56,8 @@ import { ConnexionMedecinComponent } from './connexion-medecin/connexion-medecin
     BrowserModule,
     AppRoutingModule,
     FullCalendarModule, //pour full callendar
-    FormsModule,// Ajoutez FormsModule ici
+    FormsModule,
+    // Ajoutez FormsModule ici
     // ReactiveFormsModule //reactive forme module,
     MatDialogModule, 
     MatButtonModule, 
@@ -56,7 +65,9 @@ import { ConnexionMedecinComponent } from './connexion-medecin/connexion-medecin
     MaterialModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    AccordionModule.forRoot(),
+    CommonModule, ModalModule.forRoot()
   ],
   exports:[
     MatDialogModule,
