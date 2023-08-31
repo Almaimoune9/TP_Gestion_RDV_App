@@ -42,5 +42,4 @@ export class AjoutPatientComponent implements OnInit{
   }
 
 
-
 }

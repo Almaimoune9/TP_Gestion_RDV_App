@@ -4,6 +4,8 @@ import { CalendarOptions } from '@fullcalendar/core/';
 import frLocale from '@fullcalendar/core/locales/fr';
 import dayGridPlugin from '@fullcalendar/daygrid'; // important!
 import { Rendezvous } from '../rendezvous';
+import { MatDialog } from '@angular/material/dialog';
+import { CreationRendezVousComponent } from '../creation-rendez-vous/creation-rendez-vous.component';
 
 @Component({
   selector: 'app-calendrier-rendez-vous',
@@ -27,11 +29,16 @@ export class CalendrierRendezVousComponent {
     locale: frLocale,
     events: this.tableau
   };
-  constructor(private router: Router){
+  
+  constructor(private router: Router,private dialogRef:MatDialog){
     this.tableau.push(this.event1);
   }
   deconnexion(){
     this.router.navigate(['/Connexion']);
+  }
+//______________________________pour le popup____________________________
+  openDialog(){
+    this.dialogRef.open(CreationRendezVousComponent);
   }
 
 }
