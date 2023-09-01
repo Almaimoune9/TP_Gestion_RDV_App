@@ -37,7 +37,7 @@
           [ngClass]="{'invalid-field':sexeVar.invalid && sexeVar.touched}">
 
         <!-- La proprieté "\d{4}-\d{2}-\d{2}" autirise uniquement les types date  -->
-        <input type="text" name="naissance"
+        <input type="date" name="naissance"
         [(ngModel)]="patient.naissance" required
         pattern="\d{4}-\d{2}-\d{2}"
         #naissanceVar="ngModel"

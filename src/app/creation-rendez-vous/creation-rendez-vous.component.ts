@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { RdvService } from '../mes_services/rdv.service';
+import { rendezVous } from '../models/rendezVous';
 
 @Component({
   selector: 'app-creation-rendez-vous',
@@ -8,11 +10,48 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class CreationRendezVousComponent {
 
-  constructor(private dialogRef :MatDialog){
+  rdvForm !: FormGroup;
+
+  // public id :number,
+  // public date : string,
+  // public heure : string,
+  // public medecin : string,
+  // public description : string,
+
+  constructor(private rdvService :RdvService, private fb:FormBuilder){
+
+    this.rdvForm = this.fb.group({
+        // id: ['', Validators.required],
+        date: ['', Validators.required],
+        heure: ['', Validators.required],
+        medecin: ['', Validators.required],
+        description: ['', Validators.required],
+      });
+  }
+
+  onSubmit() {
+    if (this.rdvForm.valid) {
+      const newRdv = this.rdvForm.value as rendezVous;
+      this.rdvService.saveRdv(newRdv);
+      console.warn(newRdv);
+      this.rdvForm.reset();
+    }
+    // else {
+    //   console.warn('Impossible de créer un rendez-vous.');
+    // }
   }
 
 
-  closepopup(){
-    this.dialogRef.closeAll();
-  }
+
+
+
+//   validerRendezVous() {
+//     // Enregistrer les données du rendez-vous dans le service RdvService
+//     this.rdvService.rdvDetail.push(this.rendezVous);
+//     this.rendezVous = new Rdv(0, this.rendezVous.date, this.rendezVous.heure,
+//       this.rendezVous.medecin,this.rendezVous.description,this.rendezVous.title);
+//     this.closepopup();
+//     console.log(this.rendezVous);
+// }
+
 }

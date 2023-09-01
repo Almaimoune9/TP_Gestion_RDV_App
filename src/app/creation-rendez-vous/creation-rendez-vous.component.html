@@ -1,22 +1,113 @@
-<h1 mat-dialog-title> Prendre un rendez-vous</h1>
+<h1 mat-dialog-title>Prendre un rendez-vous</h1>
+<div mat-dialog-content class="content">
+  <form [formGroup]="rdvForm" (ngSubmit)="onSubmit()" class="form">
+    <div>
+      <label>Date</label><br>
+      <input type="date" formControlName="date" required class="d">
+    </div>
+    <div>
+      <label>Heure</label><br>
+      <input type="time" formControlName="heure" required class="h">
+    </div>
+    <div>
+      <label>Médecin</label><br>
+      <input type="text" formControlName="medecin" required class="med">
+    </div>
+    <div>
+      <label>Motif</label><br>
+    <textarea id="description" name="description" rows="4" cols="50" formControlName="description"></textarea>
+      <!-- <input type="text" formControlName="description" required> -->
+    </div>
+    <div class="btn" mat-dialog-actions>
+      <!-- <button mat-button mat-dialog-close  style="margin-right: 40%;" >Fermez</button> -->
+      <button type="submit" [disabled]="!rdvForm.valid">Valider</button>
+    </div>
+  </form>
+</div>
+
+<!-- <h1 mat-dialog-title> Prendre un rendez-vous</h1>
+<div mat-dialog-content>
+
+<form [formGroup]="rdvForm" (ngSubmit)="onSubmit()">
+
+  <div>
+    <label>Date</label>
+    <input type="text" formControlName="date" required>
+  </div>
+
+  <div>
+    <label>Heure</label>
+    <input type="text" formControlName="heure" required>
+  </div>
+
+  <div>
+    <label>Medecin</label>
+    <input type="text" formControlName="medecin" required>
+  </div>
+
+  <div>
+    <label>Motif</label>
+    <input type="text" formControlName="description" required>
+  </div>
+
+  <div class="btn">
+    <button type="submit">Valider</button>
+  </div>
+</form>
+
+
+
+</div> -->
+<!-- <h1 mat-dialog-title> Prendre un rendez-vous</h1>
 
  <div mat-dialog-actions class="btn">
+
+    <form [formGroup]="rdvForm" (ngSubmit)="onSubmit()">
+
+    <label for="date">Date</label>
+    <input type="date" id="date" formControlName="date" >
+
+    <label for="heure">Heure</label>
+    <input type="time" id="heure" formControlName="heure">
+
+    <label for="medecin">Medecin</label>
+    <input type="text" id="medecin" formControlName="medecin" >
+
+    <label for="description">Motif</label>
+    <textarea id="description" formControlName="description" rows="4" cols="50" ></textarea>
+
+    <div>
+      <button (click)="closepopup()" style="margin-right: 40%;" >Fermez</button>
+      <button type="submit">Valider</button>
+    </div>
+
+  </form>
+
+  </div> -->
+
+
+<!-- <h1 mat-dialog-title> Prendre un rendez-vous</h1>
+
+ <div mat-dialog-actions class="btn">
+  <form action="">
   <div>
     <label for="date">Date</label>
-            <input type="date" id="date" name="date">
+    <input type="date" id="date" name="date" [(ngModel)]="rendezVous.date">
 
-            <label for="text">Heure</label>
-            <input type="text" id="telephone" name="text">
+    <label for="heure">Heure</label>
+    <input type="time" id="heure" name="heure" [(ngModel)]="rendezVous.heure">
 
-            <label for="patient">Patient</label>
-            <select id="patient" name="patient">
-              <option value=""></option>
-              <option value="feminin">Feminin</option>
-              <option value="masculin">Masculin</option>
-            </select>
-            <label for="description">Motif</label>
-          <textarea id="description" name="description" rows="4" cols="50"></textarea>
-     </div>
+    <label for="medecin">Medecin</label>
+    <input type="text" id="medecin" name="medecin" [(ngModel)]="rendezVous.medecin">
+    <select id="patient" name="patient">
+      <option value=""></option>
+      <option value="feminin">Feminin</option>
+      <option value="masculin">Masculin</option>
+    </select>
+    <label for="description">Motif</label>
+    <textarea id="description" name="description" rows="4" cols="50" [(ngModel)]="rendezVous.description"></textarea>
+  </div>
     <button (click)="closepopup()" style="margin-right: 40%;" >Fermez</button>
-    <button >Valider</button>
- </div>
+    <button>Valider</button>
+  </form>
+</div> -->

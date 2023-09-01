@@ -1,4 +1,4 @@
-
+/*
 input, select {
   width: 50%;
   margin-left:20;
@@ -95,4 +95,17 @@ button{
 
 
 
+ */
+
+.content{
+  padding: auto;
+  margin: auto;
+}
+.form{
+  width: 70%;
+  height: auto;
+  background-color: rgb(224, 224, 224);
+  margin-left: 15%;
+  margin-right: 15%;
+}
 

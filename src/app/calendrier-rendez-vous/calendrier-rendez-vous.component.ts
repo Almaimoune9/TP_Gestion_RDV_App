@@ -1,45 +1,41 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';//pour la redirection
 import { CalendarOptions } from '@fullcalendar/core/';
 import frLocale from '@fullcalendar/core/locales/fr';
 import dayGridPlugin from '@fullcalendar/daygrid'; // important!
-import { Rendezvous } from '../rendezvous';
+// import { Rendezvous } from '../rendezvous';
 import { MatDialog } from '@angular/material/dialog';
 import { CreationRendezVousComponent } from '../creation-rendez-vous/creation-rendez-vous.component';
+import { RdvService } from '../mes_services/rdv.service';
+import { rendezVous } from '../models/rendezVous';
 
 @Component({
   selector: 'app-calendrier-rendez-vous',
   templateUrl: './calendrier-rendez-vous.component.html',
   styleUrls: ['./calendrier-rendez-vous.component.css']
 })
-export class CalendrierRendezVousComponent {
+export class CalendrierRendezVousComponent implements OnInit {
+
+  tableauList:rendezVous[]=[];
 
 
-
-  calendarPlugins = [dayGridPlugin]; // important!
-  tableau: Rendezvous[] = [];
-  event1 = new Rendezvous("Evénément 1","2023-08-29");
-  event2 = new Rendezvous("Evénément 2","2023-08-30");
-
-  // service.getRendezList [
-  //   { title: 'event 1', date: '2023-08-29' },
-  //   { title: 'event 2', date: '2023-08-30' }
-  // ]
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
     plugins: [dayGridPlugin],
-    locale: frLocale,
-    events: this.tableau
+    locale: frLocale
   };
 
-  constructor(private router: Router,private dialogRef:MatDialog){
-    this.tableau.push(this.event1);
-    this.tableau.push(this.event2);
+  constructor(private router: Router,private dialogRef:MatDialog,private rdvService:RdvService){
+
+  }
+  //================Recuperer la liste des rdv depuis le service==============
+  ngOnInit(): void {
+    this.tableauList=this.rdvService.getRdv();
   }
   deconnexion(){
     this.router.navigate(['/Connexion']);
   }
-//______________________________pour le popup____________________________
+//___________________________pour le popup__________________________
   openDialog(){
     this.dialogRef.open(CreationRendezVousComponent);
   }
