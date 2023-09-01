@@ -22,7 +22,8 @@ export class CalendrierRendezVousComponent implements OnInit {
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
     plugins: [dayGridPlugin],
-    locale: frLocale
+    locale: frLocale,
+
   };
 
   constructor(private router: Router,private dialogRef:MatDialog,private rdvService:RdvService){

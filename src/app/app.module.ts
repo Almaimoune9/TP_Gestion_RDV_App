@@ -32,6 +32,7 @@ import { MaterialModule } from 'src/material.mode';
 import { ConnexionMedecinComponent } from './connexion-medecin/connexion-medecin.component';
 // import { ModalModule } from 'ngx-bootstrap/modal';
 import { CommonModule } from '@angular/common';
+import { ListeRdvComponent } from './liste-rdv/liste-rdv.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { CommonModule } from '@angular/common';
     RendezVousMedecinComponent,
     DonnerRendezVousComponent,
     ConnexionMedecinComponent,
+    ListeRdvComponent,
   ],
   imports: [
     BrowserModule,

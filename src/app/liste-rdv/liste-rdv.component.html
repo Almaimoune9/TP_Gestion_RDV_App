@@ -1,0 +1,18 @@
+<p>liste-rdv works!</p>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Date</th>
+    <th>Heure</th>
+    <th>Medecin</th>
+    <th>Motif</th>
+  </tr>
+  <tr *ngFor="let list of tableRDV">
+    <td>{{list.id}}</td>
+    <td>{{list.date}}</td>
+    <td>{{list.heure}}</td>
+    <td>{{list.medecin}}</td>
+    <td>{{list.description}}</td>
+
+  </tr>
+</table>

@@ -2,11 +2,12 @@
 <div class="side-menu">
   <ul>
       <li><a routerLink="/">Accueil</a></li>
+      <li><a routerLink="/listeRdv">Liste-rdv</a></li>
+
       <li><a (click)="openDialog()">Prendre un rendez-vous</a></li>
       <li><a routerLink="/Ajouter_Patient">Ajouter patient</a></li>
       <li><a routerLink="/Liste_Medecin">Liste des medecins</a></li>
 <!-- à revoir demande creation d'un composent article  -->
-      <li><a routerLink="/Ajouter_Patient">Lire des articles</a></li>
       <input type="submit" value="Déconnexion" (click)="deconnexion()">
   </ul>
 </div>
