@@ -1,9 +1,9 @@
-<router-outlet></router-outlet>
-<div class="container col-md-6 offset-md-3 mt-5">
+<!-- <router-outlet></router-outlet>
+<div class="grand">
     <div class="card">
         <h4 class="card-header">INSCRIPTION</h4>
         <div class="card-body">
-            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" class="forme">
                 <div class="mb-3">
                     <label class="form-label">Prenom</label>
                     <input type="text" formControlName="prenom" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.prenom.errors }" />
@@ -57,4 +57,68 @@
             </form>
         </div>
     </div>
+    <div class="photo">
+      <img src="../assets/img/medecin.png" alt="">
+    </div>
+</div> -->
+
+<!-- nouvelle partie -->
+<div class="grand">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="forme">
+      <div class="labs">
+        <label for="prenom">Prénom :</label>
+        <label for="nom">Nom :</label>
+        <label for="sexe">Sexe :</label>
+        <label for="naissance">Specialité :</label>
+        <label for="tel">Téléphone :</label>
+        <label for="email">Email :</label>
+        <label for="pass">Mot de passe :</label>
+        <label for="confime">Confimer :</label>
+
+      </div>
+      <div class="inputs">
+        <input type="text" formControlName="prenom"  [ngClass]="{ 'is-invalid': submitted && f.prenom.errors }" />
+                    <div *ngIf="submitted && f.prenom.errors" class="invalid-feedback">
+                        <div *ngIf="f.prenom.errors.required">Prénom obligatoire</div>
+                    </div>
+        <input type="text" formControlName="nom"  [ngClass]="{ 'is-invalid': submitted && f.nom.errors }" />
+        <div *ngIf="submitted && f.nom.errors" class="invalid-feedback">
+            <div *ngIf="f.nom.errors.required">Nom obligatoire</div>
+        </div>
+
+        <input type="text" formControlName="specialite"  [ngClass]="{ 'is-invalid': submitted && f.specialite.errors }" />
+        <div *ngIf="submitted && f.specialite.errors" class="invalid-feedback">
+            <div *ngIf="f.specialite.errors.required">Specialité obligatoire</div>
+        </div>
+
+        <input type="tel" formControlName="telephone"  [ngClass]="{ 'is-invalid': submitted && f.telephone.errors }" />
+        <div *ngIf="submitted && f.telephone.errors" class="invalid-feedback">
+            <div *ngIf="f.telephone.errors.required">Telephone</div>
+        </div>
+
+        <input type="text" formControlName="email"  [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">L'email est obligatoire</div>
+        </div>
+
+         <input type="password" formControlName="motdepass" [ngClass]="{ 'is-invalid': submitted && f.motdepass.errors }" />
+                    <div *ngIf="submitted && f.motdepass.errors" class="invalid-feedback">
+                        <div *ngIf="f.motdepass.errors.required">Mot de pass obligatoire</div>
+                        <div *ngIf="f.motdepass.errors.minlength">Mot de pass à 6 caractères</div>
+                    </div>
+      </div>
+    </div>
+    <div class="valid">
+      <button [disabled]="loading">
+          <span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>
+          Valider
+      </button>
+  </div>
+  </form>
+
+  <div class="photo">
+
+    <img src="../assets/img/medecin.png" alt="">
+  </div>
 </div>

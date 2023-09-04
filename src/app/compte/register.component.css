@@ -1,0 +1,215 @@
+/*
+.grand{
+  display: flex;
+  align-items: center;
+  margin: 2em;
+  justify-content: space-between;
+}
+.grand .photo{
+
+  height: auto;
+  text-align: center;
+  padding: 1em;
+  margin: 0 2em 2em 0;
+
+}
+.grand .photo img{
+
+  width: 20em;
+  height: auto;
+
+}
+.grand .forme{
+
+  padding: 0.2em;
+  margin-left: 2em;
+  width: 90%;
+  height: 60vh;
+  display: flex;
+}
+.grand .forme .labs label{
+  display: block;
+  margin: 0.4em;
+  margin-bottom: 1em;
+}
+.grand .forme .labs{
+
+  width: 100%;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: underline;
+  padding-top: 0.5em;
+}
+
+.grand .forme .champs input{
+  width: 30em ;
+  height: 2em;
+  border-radius: 10px;
+
+  margin: 1em;
+  border: 1px solid #00FF00;
+  display: block;
+  margin-bottom: 1.7em;
+}
+form{
+
+  width: 60%;
+  margin-bottom: 2em;
+  background-color: #D9D9D9;
+  border-radius: 15px;
+}
+.grand .valid{
+
+  text-align: center;
+  padding: 0.5em;
+ }
+ .grand .valid button{
+  width: 7em;
+  font-size: 1.3em;
+  font-weight: bolder;
+  background-color: #008000;
+  margin: 0.3em;
+  border: 1px solid #008000;
+  border-radius: 15px;
+  color: #fff;
+  text-transform: uppercase;
+
+ }
+ .invalid-field {
+  border: 2px solid red;
+}
+
+
+  .grand .forme{
+    padding: 1em;
+     margin-left: 2em;
+    width: 90%;
+    height: 60vh;
+    display: flex;
+  }
+  .grand .forme .labs{
+    width: 30%;
+    font-size: 1.9em;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .grand .forme .champs input{
+    width: 25em ;
+    height: 2.2em;
+    border-radius: 10px;
+    padding: 1px;
+    border: 1px solid #00FF00;
+    outline: none;
+  }
+  form{
+    width: 60%;
+    margin-bottom: 2em;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+}
+  .grand .valid{
+    text-align: center;
+    padding: 0.5em;
+   }
+   .grand .valid input{
+    width: 20%;
+    margin-top: 10px;
+    font-size: 1.3em;
+    font-weight: bolder;
+    background-color: #008000;
+    border: 1px solid #008000;
+    border-radius: 15px;
+    color: #fff;
+    text-transform: uppercase;
+   } */
+
+
+
+   /* _________________________Nouvelle methode______________________________ */
+
+.grand{
+  display: flex;
+  align-items: center;
+  margin: 2em;
+  justify-content: space-between;
+}
+
+.grand .photo{
+
+  height: auto;
+  text-align: center;
+  padding: 1em;
+  margin: 0 2em 2em 0;
+
+}
+.grand .photo img{
+
+  width: 20em;
+  height: auto;
+
+}
+
+.grand .forme{
+
+  padding: 0.2em;
+  margin-left: 2em;
+  width: 90%;
+  height: 60vh;
+  display: flex;
+}
+.grand .forme .labs label{
+  display: block;
+  margin: 0.4em;
+  margin-bottom: 1em;
+}
+
+.grand .forme .labs{
+
+  width: 100%;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: underline;
+  padding-top: 0.5em;
+}
+.grand .forme .labs{
+
+  width: 100%;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: underline;
+  padding-top: 0.5em;
+}
+
+.grand .forme input{
+  width: 30em ;
+  height: 2em;
+  border-radius: 10px;
+
+  margin: 1em;
+  border: 1px solid #00FF00;
+  display: block;
+  margin-bottom: 2.5em;
+}
+form{
+
+  width: 60%;
+  margin-bottom: 2em;
+  background-color: #D9D9D9;
+  border-radius: 15px;
+}
+
+.grand .valid{
+  text-align: center;
+  padding: 0.5em;
+ }
+ .grand .valid button{
+  width: 20%;
+  margin-top: 10px;
+  font-size: 1.3em;
+  font-weight: bolder;
+  background-color: #008000;
+  border: 1px solid #008000;
+  border-radius: 15px;
+  color: #fff;
+  text-transform: uppercase;
+ }

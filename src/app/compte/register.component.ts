@@ -6,7 +6,9 @@ import { first } from 'rxjs/operators';
 import { CompteService } from './compte.service';
 import { AlertService } from '@app/_service';
 
-@Component({ templateUrl: 'register.component.html' })
+@Component({ templateUrl: 'register.component.html',
+styleUrls: ['./register.component.css']
+ })
 export class RegisterComponent implements OnInit {
     form!: FormGroup;
     loading = false;
@@ -21,7 +23,7 @@ export class RegisterComponent implements OnInit {
     ) {
         // redirect to home if already logged in
         if (this.compteService.medecinValue) {
-            this.router.navigate(['/']);
+            this.router.navigate(['/Rendez_vous_medecin']);
         }
     }
 
@@ -56,7 +58,7 @@ export class RegisterComponent implements OnInit {
             .subscribe({
                 next: () => {
                     this.alertService.success('inscription reussie', true);
-                    this.router.navigate(['/compte/login'], { queryParams: { registered: true }});
+                    this.router.navigate(['/Rendez_vous_medecin'], { queryParams: { registered: true }});
                 },
                 error: error => {
                     this.alertService.error(error);
