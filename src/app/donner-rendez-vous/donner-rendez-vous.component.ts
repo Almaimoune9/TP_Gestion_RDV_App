@@ -31,5 +31,6 @@ export class DonnerRendezVousComponent implements OnInit {
 
   createAppointment() {
     this.dialogRef.close();
+    
   }
 }

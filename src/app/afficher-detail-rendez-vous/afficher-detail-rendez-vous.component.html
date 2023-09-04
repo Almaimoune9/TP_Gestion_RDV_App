@@ -1,6 +1,6 @@
 <h1 mat-dialog-title> Détails du rendez-vous </h1>
 
-<div mat-dialog-content class="details">
+<div mat-dialog-content class="details" *ngFor="let data of listdet">
   <p>Date : {{ data.date }}</p>
   <p>Heure : {{ data.time }}</p>
   <p>Patient : {{ data.patient }}</p>

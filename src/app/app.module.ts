@@ -1,19 +1,22 @@
-
 import { NgModule } from '@angular/core';
-import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
-import { FullCalendarModule } from '@fullcalendar/angular'; //pour full callendar
-import { FormsModule } from '@angular/forms'; // Importez FormsModule
-import { ReactiveFormsModule } from '@angular/forms'; //importation de reactive forme module
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatButtonModule} from '@angular/material/button';
-import {HttpClientModule} from '@angular/common/http'
+import { BrowserModule } from '@angular/platform-browser';
+import { FullCalendarModule } from '@fullcalendar/angular';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {ToastrModule} from 'ngx-toastr';
-// import { AccordionModule } from 'ngx-bootstrap/accordion'
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
+import { ModalModule } from 'ngx-bootstrap/modal'; // Assurez-vous que ngx-bootstrap est correctement installé
 
+// Importez les composants de ngx-bootstrap que vous utilisez
+import { AccordionModule } from 'ngx-bootstrap/accordion';
 
-
+// Utilisé le faux backend
+import { fakeBackendProvider } from './_helpers';
 
 import { AjoutMedecinComponent } from './ajout-medecin/ajout-medecin.component';
 import { ListePatientComponent } from './liste-patient/liste-patient.component';
@@ -27,12 +30,12 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { StatutComponent } from './statut/statut.component';
 import { RendezVousMedecinComponent } from './rendez-vous-medecin/rendez-vous-medecin.component';
 import { DonnerRendezVousComponent } from './donner-rendez-vous/donner-rendez-vous.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from 'src/material.mode';
+import { MaterialModule } from 'src/material.mode'; // Assurez-vous que ce chemin est correct
 import { ConnexionMedecinComponent } from './connexion-medecin/connexion-medecin.component';
-// import { ModalModule } from 'ngx-bootstrap/modal';
-import { CommonModule } from '@angular/common';
 import { ListeRdvComponent } from './liste-rdv/liste-rdv.component';
+import { LoginComponent, RegisterComponent } from './compte';
+import { JwtInterceptor, ErrorInterceptor } from './_helpers';
+import { AlertComponent } from './_components';
 
 @NgModule({
   declarations: [
@@ -51,29 +54,33 @@ import { ListeRdvComponent } from './liste-rdv/liste-rdv.component';
     DonnerRendezVousComponent,
     ConnexionMedecinComponent,
     ListeRdvComponent,
+    LoginComponent,
+    RegisterComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FullCalendarModule, //pour full callendar
+    FullCalendarModule,
     FormsModule,
-    // Ajoutez FormsModule ici
-    // ReactiveFormsModule //reactive forme module,
+    ReactiveFormsModule,
     MatDialogModule,
     MatButtonModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule,
     HttpClientModule,
-    // ToastrModule.forRoot(),
-    // AccordionModule.forRoot(),
-    // CommonModule, ModalModule.forRoot()
+    ToastrModule.forRoot(),
+    AccordionModule.forRoot(),
+    CommonModule,
+    ModalModule.forRoot(),
   ],
-  exports:[
-    MatDialogModule,
+  exports: [MatDialogModule],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    // provider used to create fake backend
+    fakeBackendProvider
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-

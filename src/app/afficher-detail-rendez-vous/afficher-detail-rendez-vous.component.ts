@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 @Component({
@@ -24,18 +24,28 @@ export class AfficherDetailRendezVousComponent {
   // closepopupdetail(){
   //   this.ref.close();
   // }
+
+  public listdet: any[] = [];
   newEvent = {
     date: '',
     time: '',
     patient: '',
     motif: ''
   };
+  ajouter(mda: any[]){
+    this.listdet.push(this.newEvent);
+    console.log(this.listdet);
+  }
+
+
 
   constructor(
     private ref: MatDialogRef<AfficherDetailRendezVousComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {}
-
+  ngOnInit(){
+  this.ajouter(this.listdet);
+  }
   closepopupdetail() {
     this.ref.close();
   }
