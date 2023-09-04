@@ -1,0 +1,33 @@
+<router-outlet></router-outlet>
+<div class="container ">
+        <h4 class="card-header">Login</h4>
+        <div class="section">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" >
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">L'email est obligatoire</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Mot de pass</label>
+                    <input type="password" formControlName="motdepass" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.motdepass.errors }" />
+                    <div *ngIf="submitted && f.motdepass.errors" class="invalid-feedback">
+                        <div *ngIf="f.motdepass.errors.required">Mot de pass obligatoire</div>
+                    </div>
+                </div>
+                <div>
+                    <button [disabled]="loading" class="btn btn-primary">
+                        <span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>
+                        CONNEXION
+                    </button>
+                    <a routerLink="../register" class="btn btn-link">INSCRIPTION</a>
+                </div>
+            </form>
+        </div>
+        <!-- image  -->
+  <div class="photo">
+    <img src="../assets/img/medecin.png" alt="">
+  </div>
+</div>

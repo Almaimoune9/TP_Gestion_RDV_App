@@ -1,0 +1,73 @@
+.container{
+    display: flex;
+    align-items: center;
+  }
+  .container .photo{
+    /* border: 1px solid black; */
+    /* width: 50%; */
+    height: auto;
+    text-align: center;
+    padding: 1em;
+    margin-left: 40%;
+  
+  }
+  .container .photo img{
+    width: 20em;
+    height: auto;
+  }
+  .container .formulaire{
+    /* à enlever une fois fini  */
+    /* border: 1px solid black; */
+    padding: 1em;
+    margin-left: 2em;
+    width: 50%;
+    display: flex;
+  }
+  .container .formulaire .labs{
+    /* à enlever  */
+    /* border: 1px solid black; */
+    width: 100%;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .container .formulaire .champs input{
+    width: 30em ;
+    height: 2.2em;
+    border-radius: 10px;
+    padding: 1px;
+    border: 1px solid #00FF00;
+  }
+  form{
+    /* border: 1px solid black; */
+    width: 60%;
+    margin-bottom: 2em;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    /* box-shadow: 0px 3px rgba(100, 100, 100, 0.397), 0em 0em ; */
+  
+  }
+  .container .valid{
+    /* à enlever  */
+    /* border: 1px solid black; */
+    text-align: center;
+    padding: 0.5em;
+   }
+   .container .valid input{
+    width: 7em;
+    font-size: 1.3em;
+    font-weight: bolder;
+    background-color: #008000;
+    margin: 0.3em;
+    border: 1px solid #008000;
+    border-radius: 15px;
+    color: #fff;
+    text-transform: uppercase;
+  
+   }
+  
+  section{
+    width: 50%;
+  }
+  
+  

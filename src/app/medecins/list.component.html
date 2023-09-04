@@ -1,0 +1,46 @@
+<div class="p-4">
+    <div class="side-menu">
+        <ul>
+            <li routerLink="/Rendez_vous_medecin">Mes rendez-vous</li>
+            <li routerLink="/Ajouter_Patient">Ajouter patient</li>
+            <li routerLink="/Ajouter_Medecin">Ajouter Medecin</li>
+            <li routerLink="/Liste_Patient">Liste des patients</li>
+            <li routerLink="/medecins">Liste des medecins</li>
+            <li>Créer des articles</li>
+            <input routerLink="/Connexion" type="submit" value="Déconnexion" >
+        </ul>
+    </div>
+    <div class="container">
+        <h2>La liste des medecins</h2>
+        <a class="ajouter" routerLink="add">Add medecin</a>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th style="width: 30%">Nom</th>
+                    <th style="width: 30%">Prenom</th>
+                    <th style="width: 30%">E-mail</th>
+                    <th style="width: 10%">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let medecin of medecins">
+                    <td>{{medecin.nom}}</td>
+                    <td>{{medecin.prenom}}</td>
+                    <td>{{medecin.email}}</td>
+                    <td style="white-space: nowrap">
+                        <a routerLink="edit/{{medecin.id}}" class="btn btn-sm btn-primary me-1">Edit</a>
+                        <button (click)="deleteMedecin(medecin.id)" class="btn btn-sm btn-danger" style="width: 58px" [disabled]="medecin.isDeleting">
+                            <span *ngIf="medecin.isDeleting" class="spinner-border spinner-border-sm"></span>
+                            <span *ngIf="!medecin.isDeleting">Delete</span>
+                        </button>
+                    </td>
+                </tr>
+                <tr *ngIf="!medecins">
+                    <td colspan="4" class="text-center">
+                        <span class="spinner-border spinner-border-lg align-center"></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

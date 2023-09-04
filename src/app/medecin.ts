@@ -8,5 +8,6 @@ export class Medecin {
     
 
     static component: any;
+    token: any;
     constructor(){}
   }

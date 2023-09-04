@@ -14,11 +14,14 @@ import { StatutComponent } from './statut/statut.component';
 import { RendezVousMedecinComponent } from './rendez-vous-medecin/rendez-vous-medecin.component';
 import { DonnerRendezVousComponent } from './donner-rendez-vous/donner-rendez-vous.component';
 import { ConnexionMedecinComponent } from './connexion-medecin/connexion-medecin.component';
-
+import { RegisterComponent, LoginComponent } from './compte';
+import { AuthGuard } from './_helpers';
+const medecinsModule = () => import('./medecins/medecins.module').then(x => x.MedecinsModule);
 
 const routes: Routes = [
 
-  {path:'', component:AccueilComponent},
+  {path:'', component:AccueilComponent, canActivate: [AuthGuard]},
+  { path: 'medecins', loadChildren: medecinsModule, canActivate: [AuthGuard] },
   {path :'Ajouter_Medecin', component : AjoutMedecinComponent},
   {path : 'Ajouter_Patient', component: AjoutPatientComponent},
   {path: 'Liste_Medecin', component: ListeMedecinComponent},
@@ -30,8 +33,11 @@ const routes: Routes = [
   {path:'Detail_Rendez_vous',component:AfficherDetailRendezVousComponent},
   {path:"Connexion", component: ConnexionComponent},
   {path: 'Statut', component: StatutComponent},
-  {path: 'connexion_medecin', component: ConnexionMedecinComponent},
+  {path: 'compte/login', component:LoginComponent},
+  {path: 'compte/register', component: RegisterComponent},
 
+  //Redeirige l'utilisateur sur la page d'accueil dans le cas où l'URL n'existe pas
+  { path: '**', redirectTo: '' }
 ];
 
 

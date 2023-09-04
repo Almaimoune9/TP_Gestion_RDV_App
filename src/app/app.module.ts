@@ -5,13 +5,14 @@ import { FormsModule } from '@angular/forms'; // Importez FormsModule
 import { ReactiveFormsModule } from '@angular/forms'; //importation de reactive forme module
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
-import {HttpClientModule} from '@angular/common/http'
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {ToastrModule} from 'ngx-toastr';
 import { AccordionModule } from 'ngx-bootstrap/accordion'
 
-
+// Utilisé le faux backend
+import { fakeBackendProvider } from './_helpers';
 
 import { AjoutMedecinComponent } from './ajout-medecin/ajout-medecin.component';
 import { ListePatientComponent } from './liste-patient/liste-patient.component';
@@ -30,6 +31,9 @@ import { MaterialModule } from 'src/material.mode';
 import { ConnexionMedecinComponent } from './connexion-medecin/connexion-medecin.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { CommonModule } from '@angular/common';
+import { LoginComponent, RegisterComponent } from './compte';
+import { JwtInterceptor, ErrorInterceptor } from './_helpers';
+import { AlertComponent } from './_components';
 
 @NgModule({
   declarations: [
@@ -47,6 +51,10 @@ import { CommonModule } from '@angular/common';
     RendezVousMedecinComponent,
     DonnerRendezVousComponent,
     ConnexionMedecinComponent,
+    AfficherDetailRendezVousComponent,
+    LoginComponent,
+    RegisterComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
@@ -63,12 +71,19 @@ import { CommonModule } from '@angular/common';
     HttpClientModule,
     ToastrModule.forRoot(),
     AccordionModule.forRoot(),
-    CommonModule, ModalModule.forRoot()
+    CommonModule, ModalModule.forRoot(),
   ],
   exports:[
     MatDialogModule,
   ],
-  providers: [],
+  providers: [
+
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+
+     // provider used to create fake backend
+     fakeBackendProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
