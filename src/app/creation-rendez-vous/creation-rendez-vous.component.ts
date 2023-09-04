@@ -21,7 +21,6 @@ export class CreationRendezVousComponent {
   constructor(private rdvService :RdvService, private fb:FormBuilder){
 
     this.rdvForm = this.fb.group({
-        // id: ['', Validators.required],
         date: ['', Validators.required],
         heure: ['', Validators.required],
         medecin: ['', Validators.required],

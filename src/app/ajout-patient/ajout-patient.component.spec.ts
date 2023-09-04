@@ -19,3 +19,6 @@ describe('AjoutPatientComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+
+

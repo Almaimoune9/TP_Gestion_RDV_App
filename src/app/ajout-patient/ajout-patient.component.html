@@ -1,7 +1,6 @@
-
 <div class="grand">
   <!-- formulaire d'inscriotion patient  -->
-  <form novalidate (ngSubmit)="EnregitreDonne(patientForm)" #patientForm="ngForm">
+  <form>
     <div class="forme">
       <!-- Les labels  -->
       <div class="labs">
@@ -17,86 +16,31 @@
       <!-- Les champs  -->
       <div class="champs">
 
-        <input type="text" name="prenom"
-          [(ngModel)]="patient.prenom" required
-          pattern="[A-Za-z]+"
-          #prenomVar="ngModel"
-          [ngClass]="{'invalid-field':prenomVar.invalid && prenomVar.touched}">
+        <input type="text" formControlName="prenom">
 
-        <input type="text" name="nom"
-          [(ngModel)]="patient.nom" required
-          pattern="[A-Za-z]+"
-          #nomVar="ngModel"
-          [ngClass]="{'invalid-field':nomVar.invalid && nomVar.touched}">
+        <input type="text" formControlName="nom">
 
           <!-- La proprieté "^(M|F)$" autorise uniquement M ou F  -->
-        <input type="text" name="sexe"
-          [(ngModel)]="patient.sexe" required
-          pattern="^(M|F)$"
-          #sexeVar="ngModel"
-          [ngClass]="{'invalid-field':sexeVar.invalid && sexeVar.touched}">
+        <input type="text" formControlName="sexe">
 
         <!-- La proprieté "\d{4}-\d{2}-\d{2}" autirise uniquement les types date  -->
-        <input type="date" name="naissance"
-        [(ngModel)]="patient.naissance" required
-        pattern="\d{4}-\d{2}-\d{2}"
-        #naissanceVar="ngModel"
-        [ngClass]="{'invalid-field': naissanceVar.invalid && naissanceVar.touched}">
+        <input type="date" formControlName="naissance">
                 <!-- Champ de téléphone -->
-        <input type="tel" name="tel"
-        [(ngModel)]="patient.telephone" required
-        #telVar="ngModel"
-        pattern="\d{8}"
-        [ngClass]="{'invalid-field': telVar.invalid && telVar.touched}">
+        <input type="tel" formControlName="tel">
 
-        <input type="email" name="mail"
-       [(ngModel)]="patient.email" required
-       pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
-       #mailVar="ngModel"
-       [ngClass]="{'invalid-field': mailVar.invalid && mailVar.touched}">
+        <input type="email" formControlName="mail">
 
 
               <!-- Champ de mot de passe -->
-      <input type="password" name="pass"
-      [(ngModel)]="patient.pass" required
-      #passVar="ngModel"
-      [ngClass]="{'invalid-field': passVar.invalid && passVar.touched}"
-      (input)="validatePasswordConfirmation()">
+      <input type="password" formControlName="pass">
 
       <!-- Champ de confirmation de mot de passe -->
-      <input type="password" name="confirme"
-      [(ngModel)]="patient.confirme" required
-      #confirmeVar="ngModel"
-      [ngClass]="{'invalid-field': confirmeVar.invalid && confirmeVar.touched}"
-      (input)="validatePasswordConfirmation()">
+      <input type="password" formControlName="confirme">
 
       </div>
 
     </div>
     <div class="valid">
-      <!-- <input type="submit" value="valider"> -->
-      <div *ngIf="prenomVar.invalid && prenomVar.touched" class="error-message" style="color: red;">
-        Veillez bien renseigner le cahmp prenom.
-      </div>
-      <div *ngIf="nomVar.invalid && nomVar.touched" class="error-message" style="color: red;">
-        Veillez bien renseigner le cahmp nom.
-      </div>
-      <div *ngIf="sexeVar.invalid && sexeVar.touched" class="error-message" style="color: red;">
-        Veillez bien renseigner le cahmp sexe M pour masculin et F pour féminin.
-      </div>
-      <div *ngIf="naissanceVar.invalid && naissanceVar.touched" class="error-message" style="color: red;">
-        Le champs date de naissance prend les types date uniquement AAAA-MM-JJ.
-      </div>
-      <div *ngIf="telVar.invalid && telVar.touched" class="error-message" style="color: red;">
-        Le champs telephone prend uniquement les numeros de téléphone à 8 chiffres.
-      </div>
-      <div *ngIf="mailVar.invalid && mailVar.touched" class="error-message" style="color: red;">
-        Veillez bien renseigner votre mail.
-      </div>
-      <!-- Afficher un message d'erreur si la confirmation de mot de passe ne correspond pas -->
-      <div *ngIf="passwordsDoNotMatch" class="error-message" style="color: red;">
-        Les mots de passe ne correspondent pas.
-      </div>
       <button type="submit">valider</button>
     </div>
 
